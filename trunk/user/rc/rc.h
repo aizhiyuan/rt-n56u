@@ -228,6 +228,8 @@ void set_tcp_tweaks(void);
 void set_passthrough_pppoe(int is_on);
 void set_igmp_mld_version(void);
 void set_libc_gai(int ipv4_first);
+void clear_p2p_route_rule();
+void update_p2p_route_rule();
 
 /* net_lan.c */
 in_addr_t get_lan_ip4(void);

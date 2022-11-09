@@ -1,0 +1,4542 @@
+# ./configure --prefix=/opt/rt-n56u/trunk/stage --cross-prefix=/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc- --enable-cross-compile --arch=mips --target-os=linux --cc='/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2' --as='/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-as -mips32r2 -march=mips32r2' --enable-static --disable-shared --enable-small --enable-pthreads --enable-gpl --enable-zlib --disable-doc --disable-debug --disable-avdevice --disable-network --disable-swscale --disable-swscale-alpha --disable-ffmpeg --disable-ffplay --disable-ffprobe --disable-ffserver --disable-hwaccels --disable-dxva2 --disable-indevs --disable-outdevs --disable-devices --disable-filters --disable-encoders --disable-muxers --disable-decoders --disable-demuxers --disable-parsers --disable-postproc --disable-protocols --disable-bsfs --disable-everything --enable-protocol=file --enable-parser=aac --enable-parser=ac3 --enable-parser=mpegaudio --enable-demuxer=aac --enable-demuxer=ac3 --enable-demuxer=asf --enable-demuxer=avi --enable-demuxer=dts --enable-demuxer=eac3 --enable-demuxer=flac --enable-demuxer=flv --enable-demuxer=h264 --enable-demuxer=m4v --enable-demuxer=matroska --enable-demuxer=mov --enable-demuxer=mp3 --enable-demuxer=mpegps --enable-demuxer=mpegts --enable-demuxer=mpegvideo --enable-demuxer=ogg --enable-demuxer=wav
+AR=/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-ar
+ARCH=mips
+ARCH_CFLAGS='-Os -fomit-frame-pointer -pipe  -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security   -Wno-pointer-sign -ffunction-sections -fdata-sections'
+ARCH_CONFIG=/opt/rt-n56u/trunk/config.arch
+ARCH_EXT_LIST='
+    altivec
+    amd3dnow
+    amd3dnowext
+    armv5te
+    armv6
+    armv6t2
+    armvfp
+    iwmmxt
+    mmi
+    mmx
+    mmx2
+    neon
+    ppc4xx
+    sse
+    ssse3
+    vis
+'
+ARCH_LIST='
+    alpha
+    arm
+    avr32
+    avr32_ap
+    avr32_uc
+    bfin
+    ia64
+    m68k
+    mips
+    mips64
+    parisc
+    ppc
+    ppc64
+    s390
+    sh4
+    sparc
+    sparc64
+    tomi
+    x86
+    x86_32
+    x86_64
+'
+AS='/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-as -mips32r2 -march=mips32r2'
+BASH=/bin/sh
+BASHOPTS=cmdhist:complete_fullquote:extquote:force_fignore:hostcomplete:interactive_comments:progcomp:promptvars:sourcepath
+BASH_ALIASES=()
+BASH_ARGC=([0]="60")
+BASH_ARGV=([0]="--enable-demuxer=wav" [1]="--enable-demuxer=ogg" [2]="--enable-demuxer=mpegvideo" [3]="--enable-demuxer=mpegts" [4]="--enable-demuxer=mpegps" [5]="--enable-demuxer=mp3" [6]="--enable-demuxer=mov" [7]="--enable-demuxer=matroska" [8]="--enable-demuxer=m4v" [9]="--enable-demuxer=h264" [10]="--enable-demuxer=flv" [11]="--enable-demuxer=flac" [12]="--enable-demuxer=eac3" [13]="--enable-demuxer=dts" [14]="--enable-demuxer=avi" [15]="--enable-demuxer=asf" [16]="--enable-demuxer=ac3" [17]="--enable-demuxer=aac" [18]="--enable-parser=mpegaudio" [19]="--enable-parser=ac3" [20]="--enable-parser=aac" [21]="--enable-protocol=file" [22]="--disable-everything" [23]="--disable-bsfs" [24]="--disable-protocols" [25]="--disable-postproc" [26]="--disable-parsers" [27]="--disable-demuxers" [28]="--disable-decoders" [29]="--disable-muxers" [30]="--disable-encoders" [31]="--disable-filters" [32]="--disable-devices" [33]="--disable-outdevs" [34]="--disable-indevs" [35]="--disable-dxva2" [36]="--disable-hwaccels" [37]="--disable-ffserver" [38]="--disable-ffprobe" [39]="--disable-ffplay" [40]="--disable-ffmpeg" [41]="--disable-swscale-alpha" [42]="--disable-swscale" [43]="--disable-network" [44]="--disable-avdevice" [45]="--disable-debug" [46]="--disable-doc" [47]="--enable-zlib" [48]="--enable-gpl" [49]="--enable-pthreads" [50]="--enable-small" [51]="--disable-shared" [52]="--enable-static" [53]="--as=/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-as -mips32r2 -march=mips32r2" [54]="--cc=/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2" [55]="--target-os=linux" [56]="--arch=mips" [57]="--enable-cross-compile" [58]="--cross-prefix=/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-" [59]="--prefix=/opt/rt-n56u/trunk/stage")
+BASH_CMDS=()
+BASH_LINENO=([0]="0")
+BASH_SOURCE=([0]="./configure")
+BASH_VERSINFO=([0]="4" [1]="3" [2]="48" [3]="1" [4]="release" [5]="x86_64-pc-linux-gnu")
+BASH_VERSION='4.3.48(1)-release'
+BSF_LIST='aac_adtstoasc_bsf
+dump_extradata_bsf
+h264_mp4toannexb_bsf
+imx_dump_header_bsf
+mjpega_dump_header_bsf
+mp3_header_compress_bsf
+mp3_header_decompress_bsf
+mov2textsub_bsf
+noise_bsf
+remove_extradata_bsf
+text2movsub_bsf'
+CC='/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2'
+CC_O='-o $@'
+CFLAGS='-Os -fomit-frame-pointer -pipe  -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security   -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE'
+CMDLINE_APPEND='
+    extra_cflags
+'
+CMDLINE_SELECT='
+    
+    altivec
+    amd3dnow
+    amd3dnowext
+    armv5te
+    armv6
+    armv6t2
+    armvfp
+    iwmmxt
+    mmi
+    mmx
+    mmx2
+    neon
+    ppc4xx
+    sse
+    ssse3
+    vis
+
+    
+    
+    bsfs
+    decoders
+    demuxers
+    encoders
+    filters
+    hwaccels
+    indevs
+    muxers
+    outdevs
+    parsers
+    protocols
+
+    aandct
+    avcodec
+    avdevice
+    avfilter
+    avfilter_lavf
+    avformat
+    avisynth
+    beos_netserver
+    bzlib
+    dct
+    doc
+    dwt
+    dxva2
+    fastdiv
+    ffmpeg
+    ffplay
+    ffprobe
+    ffserver
+    fft
+    golomb
+    gpl
+    gprof
+    gray
+    h264dsp
+    hardcoded_tables
+    libdc1394
+    libdirac
+    libfaac
+    libfaad
+    libfaadbin
+    libgsm
+    libmp3lame
+    libnut
+    libopencore_amrnb
+    libopencore_amrwb
+    libopenjpeg
+    librtmp
+    libschroedinger
+    libspeex
+    libtheora
+    libvo_aacenc
+    libvorbis
+    libvpx
+    libx264
+    libxvid
+    lpc
+    lsp
+    mdct
+    memalign_hack
+    mlib
+    mpegaudio_hp
+    network
+    nonfree
+    pic
+    postproc
+    powerpc_perf
+    rdft
+    runtime_cpudetect
+    shared
+    small
+    sram
+    static
+    swscale
+    swscale_alpha
+    vaapi
+    vdpau
+    version3
+    x11grab
+    zlib
+
+    
+    beosthreads
+    os2threads
+    pthreads
+    w32threads
+
+    asm
+    cross_compile
+    debug
+    extra_warnings
+    logging
+    optimizations
+    stripping
+    yasm
+'
+CMDLINE_SET='
+    
+    bindir
+    datadir
+    incdir
+    libdir
+    mandir
+    prefix
+    shlibdir
+
+    ar
+    arch
+    as
+    build_suffix
+    cc
+    cpu
+    cross_prefix
+    dep_cc
+    extra_version
+    host_cc
+    host_cflags
+    host_ldflags
+    host_libs
+    host_os
+    ld
+    logfile
+    malloc_prefix
+    nm
+    samples
+    source_path
+    strip
+    sysinclude
+    sysroot
+    target_exec
+    target_os
+    target_path
+'
+COMPONENT_LIST='
+    bsfs
+    decoders
+    demuxers
+    encoders
+    filters
+    hwaccels
+    indevs
+    muxers
+    outdevs
+    parsers
+    protocols
+'
+CONFIGURE_HOST=/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-
+CONFIG_32BIT=y
+CONFIG_AIO=y
+CONFIG_ANON_INODES=y
+CONFIG_ARCH_BINFMT_ELF_RANDOMIZE_PIE=y
+CONFIG_ARCH_DISCARD_MEMBLOCK=y
+CONFIG_ARCH_FLATMEM_ENABLE=y
+CONFIG_ASUS_NVRAM_API=y
+CONFIG_BASE_FULL=y
+CONFIG_BASE_SMALL=0
+CONFIG_BINFMT_ELF=y
+CONFIG_BITREVERSE=y
+CONFIG_BLK_DEV=y
+CONFIG_BLK_DEV_LOOP=y
+CONFIG_BLK_DEV_LOOP_MIN_COUNT=8
+CONFIG_BLK_DEV_SD=y
+CONFIG_BLK_DEV_SR=m
+CONFIG_BLOCK=y
+CONFIG_BOOT_ELF32=y
+CONFIG_BQL=y
+CONFIG_BRIDGE=y
+CONFIG_BRIDGE_2WAYS_FDB=y
+CONFIG_BRIDGE_EAP=y
+CONFIG_BRIDGE_EBT_IP=m
+CONFIG_BRIDGE_EBT_PKTTYPE=m
+CONFIG_BRIDGE_EBT_T_FILTER=m
+CONFIG_BRIDGE_IGMP_EVENT_HOOK=y
+CONFIG_BRIDGE_IGMP_SNOOPING=y
+CONFIG_BRIDGE_NETFILTER=y
+CONFIG_BRIDGE_NF_EBTABLES=m
+CONFIG_BROKEN_ON_SMP=y
+CONFIG_BUG=y
+CONFIG_CEVT_R4K=y
+CONFIG_CHR_DEV_SG=y
+CONFIG_CPU_HAS_PREFETCH=y
+CONFIG_CPU_HAS_SYNC=y
+CONFIG_CPU_LITTLE_ENDIAN=y
+CONFIG_CPU_MIPS32=y
+CONFIG_CPU_MIPS32_R2=y
+CONFIG_CPU_MIPSR2=y
+CONFIG_CPU_R4K_FPU=y
+CONFIG_CPU_SUPPORTS_32BIT_KERNEL=y
+CONFIG_CPU_SUPPORTS_HIGHMEM=y
+CONFIG_CRC16=y
+CONFIG_CRC32=y
+CONFIG_CRC32_SARWATE=y
+CONFIG_CRC_CCITT=y
+CONFIG_CROSS_COMPILE='""'
+CONFIG_CROSS_COMPILER_PATH=/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin
+CONFIG_CROSS_COMPILER_ROOT=/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x
+CONFIG_CRYPTO=y
+CONFIG_CRYPTO_ALGAPI=y
+CONFIG_CRYPTO_ALGAPI2=y
+CONFIG_CRYPTO_ARC4=y
+CONFIG_CRYPTO_BLKCIPHER=y
+CONFIG_CRYPTO_BLKCIPHER2=y
+CONFIG_CRYPTO_ECB=y
+CONFIG_CRYPTO_HASH=y
+CONFIG_CRYPTO_HASH2=y
+CONFIG_CRYPTO_MANAGER=y
+CONFIG_CRYPTO_MANAGER2=y
+CONFIG_CRYPTO_MANAGER_DISABLE_TESTS=y
+CONFIG_CRYPTO_RNG2=y
+CONFIG_CRYPTO_SHA1=y
+CONFIG_CRYPTO_WORKQUEUE=y
+CONFIG_CSRC_R4K=y
+CONFIG_DEFAULT_HOSTNAME='"(none)"'
+CONFIG_DEFAULT_IOSCHED='"noop"'
+CONFIG_DEFAULT_MESSAGE_LOGLEVEL=4
+CONFIG_DEFAULT_MMAP_MIN_ADDR=4096
+CONFIG_DEFAULT_NOOP=y
+CONFIG_DEFAULT_SECURITY='""'
+CONFIG_DEFAULT_SECURITY_DAC=y
+CONFIG_DEFAULT_TCP_CONG='"cubic"'
+CONFIG_DEFCONFIG_LIST='"/lib/modules/NAME_RELEASE/.config"'
+CONFIG_DMA_NONCOHERENT=y
+CONFIG_DQL=y
+CONFIG_EFI_PARTITION=y
+CONFIG_EMBEDDED=y
+CONFIG_ENABLE_MUST_CHECK=y
+CONFIG_ENABLE_WARN_DEPRECATED=y
+CONFIG_EPOLL=y
+CONFIG_EVENTFD=y
+CONFIG_EXFAT_DEFAULT_CODEPAGE=866
+CONFIG_EXFAT_DEFAULT_IOCHARSET='"utf8"'
+CONFIG_EXFAT_DISCARD=y
+CONFIG_EXFAT_FS=m
+CONFIG_EXPERT=y
+CONFIG_EXPORTFS=m
+CONFIG_EXT4_FS=m
+CONFIG_EXT4_FS_XATTR=y
+CONFIG_EXT4_USE_FOR_EXT23=y
+CONFIG_EXTRA='
+    avutil
+    gplv3
+    lgplv3
+'
+CONFIG_FAT_DEFAULT_CODEPAGE=866
+CONFIG_FAT_DEFAULT_IOCHARSET='"utf8"'
+CONFIG_FAT_FS=m
+CONFIG_FIB_RULES=y
+CONFIG_FILE_LOCKING=y
+CONFIG_FIRMWARE_ENABLE_EXFAT=y
+CONFIG_FIRMWARE_ENABLE_EXT4=y
+CONFIG_FIRMWARE_ENABLE_FAT=y
+CONFIG_FIRMWARE_ENABLE_FUSE=y
+CONFIG_FIRMWARE_ENABLE_IPV6=y
+CONFIG_FIRMWARE_ENABLE_SWAP=y
+CONFIG_FIRMWARE_ENABLE_UFSD=y
+CONFIG_FIRMWARE_ENABLE_USB=y
+CONFIG_FIRMWARE_INCLUDE_DDNS_SSL=y
+CONFIG_FIRMWARE_INCLUDE_DROPBEAR=y
+CONFIG_FIRMWARE_INCLUDE_DROPBEAR_FAST_CODE=y
+CONFIG_FIRMWARE_INCLUDE_EAP_PEAP=y
+CONFIG_FIRMWARE_INCLUDE_FTPD=y
+CONFIG_FIRMWARE_INCLUDE_HDPARM=y
+CONFIG_FIRMWARE_INCLUDE_HTTPS=y
+CONFIG_FIRMWARE_INCLUDE_IPSET=y
+CONFIG_FIRMWARE_INCLUDE_LANG_CN=y
+CONFIG_FIRMWARE_INCLUDE_LPRD=y
+CONFIG_FIRMWARE_INCLUDE_MINIDLNA=y
+CONFIG_FIRMWARE_INCLUDE_NFSD=y
+CONFIG_FIRMWARE_INCLUDE_OPENSSL_EXE=y
+CONFIG_FIRMWARE_INCLUDE_OPENVPN=y
+CONFIG_FIRMWARE_INCLUDE_SFTP=y
+CONFIG_FIRMWARE_INCLUDE_SMBD=y
+CONFIG_FIRMWARE_INCLUDE_TRANSMISSION=y
+CONFIG_FIRMWARE_INCLUDE_U2EC=y
+CONFIG_FIRMWARE_INCLUDE_XUPNPD=y
+CONFIG_FIRMWARE_PRODUCT_ID='"FX-6000"'
+CONFIG_FIRMWARE_WIFI2_DRIVER=2.7
+CONFIG_FIRMWARE_WIFI5_DRIVER=2.7
+CONFIG_FLATMEM=y
+CONFIG_FLAT_NODE_MEM_MAP=y
+CONFIG_FORCE_MAX_ZONEORDER=11
+CONFIG_FRAME_WARN=4096
+CONFIG_FSNOTIFY=y
+CONFIG_FS_MBCACHE=m
+CONFIG_FUSE_FS=m
+CONFIG_FUTEX=y
+CONFIG_GE1_MAC_ESW=y
+CONFIG_GENERIC_ATOMIC64=y
+CONFIG_GENERIC_CALIBRATE_DELAY=y
+CONFIG_GENERIC_CLOCKEVENTS=y
+CONFIG_GENERIC_CLOCKEVENTS_BUILD=y
+CONFIG_GENERIC_CMOS_UPDATE=y
+CONFIG_GENERIC_HARDIRQS=y
+CONFIG_GENERIC_HWEIGHT=y
+CONFIG_GENERIC_IO=y
+CONFIG_GENERIC_IRQ_PROBE=y
+CONFIG_GENERIC_IRQ_SHOW=y
+CONFIG_HARDWARE_WATCHPOINTS=y
+CONFIG_HAS_DMA=y
+CONFIG_HAS_IOMEM=y
+CONFIG_HAS_IOPORT=y
+CONFIG_HAVE_ARCH_JUMP_LABEL=y
+CONFIG_HAVE_ARCH_KGDB=y
+CONFIG_HAVE_C_RECORDMCOUNT=y
+CONFIG_HAVE_DMA_API_DEBUG=y
+CONFIG_HAVE_DMA_ATTRS=y
+CONFIG_HAVE_DYNAMIC_FTRACE=y
+CONFIG_HAVE_FTRACE_MCOUNT_RECORD=y
+CONFIG_HAVE_FUNCTION_GRAPH_TRACER=y
+CONFIG_HAVE_FUNCTION_TRACER=y
+CONFIG_HAVE_FUNCTION_TRACE_MCOUNT_TEST=y
+CONFIG_HAVE_GENERIC_HARDIRQS=y
+CONFIG_HAVE_GENERIC_INIT_TASK=y
+CONFIG_HAVE_IRQ_WORK=y
+CONFIG_HAVE_KPROBES=y
+CONFIG_HAVE_KRETPROBES=y
+CONFIG_HAVE_MEMBLOCK=y
+CONFIG_HAVE_MEMBLOCK_NODE_MAP=y
+CONFIG_HAVE_OPROFILE=y
+CONFIG_HAVE_PERF_EVENTS=y
+CONFIG_HIGH_RES_TIMERS=y
+CONFIG_HNAT_V2=y
+CONFIG_HOTPLUG=y
+CONFIG_HW_HAS_PCI=y
+CONFIG_HZ=250
+CONFIG_HZ_250=y
+CONFIG_INET=y
+CONFIG_INET_TUNNEL=y
+CONFIG_INIT_ENV_ARG_LIMIT=32
+CONFIG_INLINE_READ_UNLOCK=y
+CONFIG_INLINE_READ_UNLOCK_IRQ=y
+CONFIG_INLINE_SPIN_UNLOCK_IRQ=y
+CONFIG_INLINE_WRITE_UNLOCK=y
+CONFIG_INLINE_WRITE_UNLOCK_IRQ=y
+CONFIG_INOTIFY_USER=y
+CONFIG_INTERNAL_PA_INTERNAL_LNA=y
+CONFIG_IOSCHED_NOOP=y
+CONFIG_IP6_NF_FILTER=y
+CONFIG_IP6_NF_IPTABLES=y
+CONFIG_IP6_NF_MANGLE=m
+CONFIG_IP6_NF_TARGET_HL=m
+CONFIG_IP6_NF_TARGET_REJECT=y
+CONFIG_IPV6=y
+CONFIG_IPV6_MROUTE=y
+CONFIG_IPV6_NDISC_NODETYPE=y
+CONFIG_IPV6_PRIVACY=y
+CONFIG_IPV6_ROUTER_PREF=y
+CONFIG_IPV6_SIT=y
+CONFIG_IPV6_SIT_6RD=y
+CONFIG_IP_ADVANCED_ROUTER=y
+CONFIG_IP_MROUTE=y
+CONFIG_IP_MULTICAST=y
+CONFIG_IP_MULTIPLE_TABLES=y
+CONFIG_IP_NF_FILTER=y
+CONFIG_IP_NF_IPTABLES=y
+CONFIG_IP_NF_IPTABLES_SPEEDUP=y
+CONFIG_IP_NF_MANGLE=m
+CONFIG_IP_NF_MATCH_TTL=m
+CONFIG_IP_NF_RAW=m
+CONFIG_IP_NF_TARGET_MASQUERADE=y
+CONFIG_IP_NF_TARGET_NETMAP=y
+CONFIG_IP_NF_TARGET_REDIRECT=m
+CONFIG_IP_NF_TARGET_REJECT=y
+CONFIG_IP_NF_TARGET_TTL=m
+CONFIG_IP_ROUTE_MULTIPATH=y
+CONFIG_IRQ_CPU=y
+CONFIG_JBD2=m
+CONFIG_L2TP=y
+CONFIG_LBDAF=y
+CONFIG_LINUXDIR=linux-3.4.x
+CONFIG_LIST='
+    
+    bsfs
+    decoders
+    demuxers
+    encoders
+    filters
+    hwaccels
+    indevs
+    muxers
+    outdevs
+    parsers
+    protocols
+
+    aandct
+    avcodec
+    avdevice
+    avfilter
+    avfilter_lavf
+    avformat
+    avisynth
+    beos_netserver
+    bzlib
+    dct
+    doc
+    dwt
+    dxva2
+    fastdiv
+    ffmpeg
+    ffplay
+    ffprobe
+    ffserver
+    fft
+    golomb
+    gpl
+    gprof
+    gray
+    h264dsp
+    hardcoded_tables
+    libdc1394
+    libdirac
+    libfaac
+    libfaad
+    libfaadbin
+    libgsm
+    libmp3lame
+    libnut
+    libopencore_amrnb
+    libopencore_amrwb
+    libopenjpeg
+    librtmp
+    libschroedinger
+    libspeex
+    libtheora
+    libvo_aacenc
+    libvorbis
+    libvpx
+    libx264
+    libxvid
+    lpc
+    lsp
+    mdct
+    memalign_hack
+    mlib
+    mpegaudio_hp
+    network
+    nonfree
+    pic
+    postproc
+    powerpc_perf
+    rdft
+    runtime_cpudetect
+    shared
+    small
+    sram
+    static
+    swscale
+    swscale_alpha
+    vaapi
+    vdpau
+    version3
+    x11grab
+    zlib
+'
+CONFIG_LLC=y
+CONFIG_LOCALVERSION='""'
+CONFIG_LOCKD=m
+CONFIG_LOCKDEP_SUPPORT=y
+CONFIG_LOCKD_V4=y
+CONFIG_LOG_BUF_SHIFT=14
+CONFIG_MAX_SWAPFILES_SHIFT=0
+CONFIG_MAX_USER_RT_PRIO=100
+CONFIG_MII=y
+CONFIG_MIPS=y
+CONFIG_MIPS_L1_CACHE_SHIFT=5
+CONFIG_MIPS_MT_DISABLED=y
+CONFIG_MISC_FILESYSTEMS=y
+CONFIG_MMU=y
+CONFIG_MODULES=y
+CONFIG_MODULE_UNLOAD=y
+CONFIG_MSDOS_PARTITION=y
+CONFIG_MT7620_ASIC=y
+CONFIG_MTD=y
+CONFIG_MTD_BLKDEVS=y
+CONFIG_MTD_BLOCK=y
+CONFIG_MTD_CFI_I1=y
+CONFIG_MTD_CFI_I2=y
+CONFIG_MTD_MAP_BANK_WIDTH_1=y
+CONFIG_MTD_MAP_BANK_WIDTH_2=y
+CONFIG_MTD_MAP_BANK_WIDTH_4=y
+CONFIG_MTD_RALINK=y
+CONFIG_MTD_SPI_FAST_CLOCK=y
+CONFIG_MTD_SPI_RALINK=y
+CONFIG_MTD_SPI_READ_DOR=y
+CONFIG_MTD_STORE_PART_SIZ=0x40000
+CONFIG_NAT_CONE=y
+CONFIG_NEED_DMA_MAP_STATE=y
+CONFIG_NEED_PER_CPU_KM=y
+CONFIG_NET=y
+CONFIG_NETDEVICES=y
+CONFIG_NETFILTER=y
+CONFIG_NETFILTER_ADVANCED=y
+CONFIG_NETFILTER_FP_SMB=y
+CONFIG_NETFILTER_NETLINK=m
+CONFIG_NETFILTER_RALINK_SWQOS_SUPPORT=y
+CONFIG_NETFILTER_XTABLES=y
+CONFIG_NETFILTER_XT_CONNMARK=y
+CONFIG_NETFILTER_XT_MARK=y
+CONFIG_NETFILTER_XT_MATCH_CONNBYTES=m
+CONFIG_NETFILTER_XT_MATCH_CONNLIMIT=y
+CONFIG_NETFILTER_XT_MATCH_CONNMARK=m
+CONFIG_NETFILTER_XT_MATCH_CONNTRACK=y
+CONFIG_NETFILTER_XT_MATCH_DSCP=m
+CONFIG_NETFILTER_XT_MATCH_HL=m
+CONFIG_NETFILTER_XT_MATCH_IPRANGE=y
+CONFIG_NETFILTER_XT_MATCH_LENGTH=m
+CONFIG_NETFILTER_XT_MATCH_LIMIT=y
+CONFIG_NETFILTER_XT_MATCH_MAC=y
+CONFIG_NETFILTER_XT_MATCH_MARK=y
+CONFIG_NETFILTER_XT_MATCH_MULTIPORT=y
+CONFIG_NETFILTER_XT_MATCH_PHYSDEV=m
+CONFIG_NETFILTER_XT_MATCH_RECENT=y
+CONFIG_NETFILTER_XT_MATCH_STATE=y
+CONFIG_NETFILTER_XT_MATCH_TCPMSS=y
+CONFIG_NETFILTER_XT_MATCH_TIME=y
+CONFIG_NETFILTER_XT_MATCH_U32=y
+CONFIG_NETFILTER_XT_MATCH_WEBSTR=m
+CONFIG_NETFILTER_XT_TARGET_CONNMARK=m
+CONFIG_NETFILTER_XT_TARGET_CT=m
+CONFIG_NETFILTER_XT_TARGET_DSCP=m
+CONFIG_NETFILTER_XT_TARGET_HL=m
+CONFIG_NETFILTER_XT_TARGET_LOG=y
+CONFIG_NETFILTER_XT_TARGET_MARK=m
+CONFIG_NETFILTER_XT_TARGET_NOTRACK=m
+CONFIG_NETFILTER_XT_TARGET_TCPMSS=y
+CONFIG_NETWORK_FILESYSTEMS=y
+CONFIG_NET_CORE=y
+CONFIG_NET_IPGRE_DEMUX=y
+CONFIG_NET_PPPOE_PTHROUGH=y
+CONFIG_NFSD=m
+CONFIG_NFSD_V3=y
+CONFIG_NFS_COMMON=y
+CONFIG_NF_CONNTRACK=y
+CONFIG_NF_CONNTRACK_FTP=m
+CONFIG_NF_CONNTRACK_H323=m
+CONFIG_NF_CONNTRACK_IPV4=y
+CONFIG_NF_CONNTRACK_IPV6=y
+CONFIG_NF_CONNTRACK_MARK=y
+CONFIG_NF_CONNTRACK_PPTP=m
+CONFIG_NF_CONNTRACK_PROCFS=y
+CONFIG_NF_CONNTRACK_RTSP=m
+CONFIG_NF_CONNTRACK_SIP=m
+CONFIG_NF_CT_PROTO_GRE=m
+CONFIG_NF_DEFRAG_IPV4=y
+CONFIG_NF_DEFRAG_IPV6=y
+CONFIG_NF_NAT=y
+CONFIG_NF_NAT_FTP=m
+CONFIG_NF_NAT_H323=m
+CONFIG_NF_NAT_NEEDED=y
+CONFIG_NF_NAT_PPTP=m
+CONFIG_NF_NAT_PROTO_GRE=m
+CONFIG_NF_NAT_RTSP=m
+CONFIG_NF_NAT_SIP=m
+CONFIG_NLATTR=y
+CONFIG_NLS=y
+CONFIG_NLS_CODEPAGE_437=y
+CONFIG_NLS_CODEPAGE_866=y
+CONFIG_NLS_DEFAULT='"utf8"'
+CONFIG_NLS_ISO8859_1=y
+CONFIG_NLS_UTF8=y
+CONFIG_PACKET=y
+CONFIG_PAGECACHE_RECLAIM=y
+CONFIG_PAGEFLAGS_EXTENDED=y
+CONFIG_PAGE_SIZE_4KB=y
+CONFIG_PARTITION_ADVANCED=y
+CONFIG_PERF_USE_VMALLOC=y
+CONFIG_PPP=y
+CONFIG_PPPOE=y
+CONFIG_PPPOL2TP=y
+CONFIG_PPP_ASYNC=y
+CONFIG_PPP_MPPE=y
+CONFIG_PPP_ONLY_IP=y
+CONFIG_PPP_SYNC_TTY=y
+CONFIG_PPTP=y
+CONFIG_PREEMPT_NONE=y
+CONFIG_PRINTK=y
+CONFIG_PROC_FS=y
+CONFIG_PROC_KCORE=y
+CONFIG_PROC_SYSCTL=y
+CONFIG_PRODUCT=RT3883
+CONFIG_RAETH=y
+CONFIG_RAETH_BQL=y
+CONFIG_RAETH_CHECKSUM_OFFLOAD=y
+CONFIG_RAETH_ESW=y
+CONFIG_RAETH_ESW_CONTROL=y
+CONFIG_RAETH_ESW_IGMP_SNOOP_SW=y
+CONFIG_RAETH_ESW_PORT_LAN1=1
+CONFIG_RAETH_ESW_PORT_LAN2=2
+CONFIG_RAETH_ESW_PORT_LAN3=3
+CONFIG_RAETH_ESW_PORT_LAN4=4
+CONFIG_RAETH_ESW_PORT_WAN=0
+CONFIG_RAETH_HW_VLAN_TX=y
+CONFIG_RAETH_NAPI=y
+CONFIG_RAETH_READ_MAC_FROM_MTD=y
+CONFIG_RAETH_SG_DMA_TX=y
+CONFIG_RALINK_GPIO=y
+CONFIG_RALINK_GPIOMODE_EPHY=y
+CONFIG_RALINK_GPIOMODE_I2C=y
+CONFIG_RALINK_GPIOMODE_PA_G=y
+CONFIG_RALINK_GPIOMODE_SPI_REFCLK=y
+CONFIG_RALINK_GPIOMODE_UARTF=y
+CONFIG_RALINK_GPIO_IRQ=y
+CONFIG_RALINK_GPIO_LED=y
+CONFIG_RALINK_GPIO_LED_USB=y
+CONFIG_RALINK_MT7620=y
+CONFIG_RALINK_RAM_SIZE=64
+CONFIG_RALINK_TIMER_WDG=m
+CONFIG_RALINK_TIMER_WDG_REBOOT_DELAY=15
+CONFIG_RALINK_TIMER_WDG_REFRESH_INTERVAL=4
+CONFIG_RALINK_UART_BRATE=115200
+CONFIG_RA_HW_NAT=m
+CONFIG_RA_HW_NAT_BINDING_THRESHOLD=20
+CONFIG_RA_HW_NAT_FIN_DLTA=5
+CONFIG_RA_HW_NAT_FULL_LMT=16383
+CONFIG_RA_HW_NAT_HALF_LMT=16383
+CONFIG_RA_HW_NAT_HASH1=y
+CONFIG_RA_HW_NAT_IPV6=y
+CONFIG_RA_HW_NAT_LAN_VLANID=1
+CONFIG_RA_HW_NAT_NTU_DLTA=5
+CONFIG_RA_HW_NAT_NTU_KA=1
+CONFIG_RA_HW_NAT_QURT_LMT=16383
+CONFIG_RA_HW_NAT_TBL_16K=y
+CONFIG_RA_HW_NAT_TCP_DLTA=5
+CONFIG_RA_HW_NAT_TCP_KA=1
+CONFIG_RA_HW_NAT_UDP_DLTA=5
+CONFIG_RA_HW_NAT_UDP_KA=1
+CONFIG_RA_HW_NAT_UNB_DLTA=3
+CONFIG_RA_HW_NAT_UNB_MNP=1000
+CONFIG_RA_HW_NAT_WAN_VLANID=2
+CONFIG_RA_HW_NAT_WIFI=y
+CONFIG_RA_NAT_HW=y
+CONFIG_ROOTFS_IN_FLASH_NO_PADDING=y
+CONFIG_RT2860V2_AP=m
+CONFIG_RT2860V2_AP_APCLI=y
+CONFIG_RT2860V2_AP_GREENAP=y
+CONFIG_RT2860V2_AP_LED=y
+CONFIG_RT2860V2_AP_LLTD=y
+CONFIG_RT2860V2_AP_MBSS=y
+CONFIG_RT2860V2_AP_RTMP_INTERNAL_TX_ALC=y
+CONFIG_RT2860V2_AP_WDS=y
+CONFIG_RT2880_DRAM_64M=y
+CONFIG_RT2880_FLASH_16M=y
+CONFIG_RT2880_MTD_PHYSMAP_BUSWIDTH=2
+CONFIG_RT2880_MTD_PHYSMAP_LEN=0x1000000
+CONFIG_RT2880_MTD_PHYSMAP_START=0x1C000000
+CONFIG_RT2880_ROOTFS_IN_FLASH=y
+CONFIG_RT2880_UART_115200=y
+CONFIG_RT3XXX_EHCI_OHCI=y
+CONFIG_RTC_LIB=y
+CONFIG_RT_FIRST_CARD=2860
+CONFIG_RT_FIRST_CARD_EEPROM='"flash"'
+CONFIG_RT_FIRST_IF_EEPROM_FLASH=y
+CONFIG_RT_FIRST_IF_RANGE_2GHZ=y
+CONFIG_RT_FIRST_IF_RF_OFFSET=0x40000
+CONFIG_RT_FIRST_IF_RT2860=y
+CONFIG_RT_IGMP_SNOOP=y
+CONFIG_RT_MAX_CLIENTS=40
+CONFIG_RT_MUTEXES=y
+CONFIG_RT_READ_MAC_FROM_MTD=y
+CONFIG_RT_SECOND_CARD=0
+CONFIG_RT_SECOND_IF_NONE=y
+CONFIG_RWSEM_GENERIC_SPINLOCK=y
+CONFIG_SCHED_OMIT_FRAME_POINTER=y
+CONFIG_SCSI=y
+CONFIG_SCSI_DMA=y
+CONFIG_SCSI_MOD=y
+CONFIG_SCSI_MULTI_LUN=y
+CONFIG_SCSI_PROC_FS=y
+CONFIG_SERIAL_8250=y
+CONFIG_SERIAL_8250_CONSOLE=y
+CONFIG_SERIAL_8250_NR_UARTS=1
+CONFIG_SERIAL_8250_RT288X=y
+CONFIG_SERIAL_8250_RUNTIME_UARTS=1
+CONFIG_SERIAL_CORE=y
+CONFIG_SERIAL_CORE_CONSOLE=y
+CONFIG_SHELL=/bin/sh
+CONFIG_SHMEM=y
+CONFIG_SIGNALFD=y
+CONFIG_SLAB=y
+CONFIG_SPLIT_PTLOCK_CPUS=4
+CONFIG_SQUASHFS=y
+CONFIG_SQUASHFS_EMBEDDED=y
+CONFIG_SQUASHFS_FRAGMENT_CACHE_SIZE=3
+CONFIG_SQUASHFS_XZ=y
+CONFIG_STACKTRACE_SUPPORT=y
+CONFIG_STANDALONE=y
+CONFIG_STP=y
+CONFIG_STRIP_ASM_SYMS=y
+CONFIG_SUNRPC=m
+CONFIG_SWAP=y
+CONFIG_SWAP_IO_SPACE=y
+CONFIG_SYN_COOKIES=y
+CONFIG_SYSCTL=y
+CONFIG_SYSFS=y
+CONFIG_SYSFS_DEPRECATED=y
+CONFIG_SYSFS_DEPRECATED_V2=y
+CONFIG_SYSVIPC=y
+CONFIG_SYSVIPC_SYSCTL=y
+CONFIG_SYS_HAS_CPU_MIPS32_R1=y
+CONFIG_SYS_HAS_CPU_MIPS32_R2=y
+CONFIG_SYS_HAS_EARLY_PRINTK=y
+CONFIG_SYS_SUPPORTS_32BIT_KERNEL=y
+CONFIG_SYS_SUPPORTS_ARBIT_HZ=y
+CONFIG_SYS_SUPPORTS_LITTLE_ENDIAN=y
+CONFIG_TCP_CONG_CUBIC=y
+CONFIG_TICK_ONESHOT=y
+CONFIG_TIMERFD=y
+CONFIG_TINY=y
+CONFIG_TINY_RCU=y
+CONFIG_TMPFS=y
+CONFIG_TOOLCHAIN_DIR=/opt/rt-n56u/toolchain-mipsel
+CONFIG_TRACE_IRQFLAGS_SUPPORT=y
+CONFIG_TRAD_SIGNALS=y
+CONFIG_TUN=y
+CONFIG_UEVENT_HELPER_PATH='"/sbin/hotplug"'
+CONFIG_UFSD_FS=m
+CONFIG_UFSD_USE_NLS=y
+CONFIG_UNIX=y
+CONFIG_UNIX98_PTYS=y
+CONFIG_USB=y
+CONFIG_USB_ACM=m
+CONFIG_USB_ANNOUNCE_NEW_DEVICES=y
+CONFIG_USB_ARCH_HAS_EHCI=y
+CONFIG_USB_ARCH_HAS_HCD=y
+CONFIG_USB_ARCH_HAS_OHCI=y
+CONFIG_USB_COMMON=y
+CONFIG_USB_DEVICEFS=y
+CONFIG_USB_DEVICE_CLASS=y
+CONFIG_USB_EHCI_HCD=m
+CONFIG_USB_EHCI_HCD_PLATFORM=y
+CONFIG_USB_EHCI_TT_NEWSCHED=y
+CONFIG_USB_LIBUSUAL=y
+CONFIG_USB_NET_CDCETHER=m
+CONFIG_USB_NET_CDC_MBIM=m
+CONFIG_USB_NET_CDC_NCM=m
+CONFIG_USB_NET_HUAWEI_CDC_NCM=m
+CONFIG_USB_NET_QMI_WWAN=m
+CONFIG_USB_NET_RNDIS_HOST=m
+CONFIG_USB_OHCI_HCD=m
+CONFIG_USB_OHCI_HCD_PLATFORM=y
+CONFIG_USB_OHCI_LITTLE_ENDIAN=y
+CONFIG_USB_PRINTER=m
+CONFIG_USB_SERIAL=m
+CONFIG_USB_SERIAL_GENERIC=y
+CONFIG_USB_SERIAL_OPTION=m
+CONFIG_USB_SERIAL_QUALCOMM=m
+CONFIG_USB_SERIAL_SIERRAWIRELESS=m
+CONFIG_USB_SERIAL_WWAN=m
+CONFIG_USB_SIERRA_NET=m
+CONFIG_USB_STORAGE=m
+CONFIG_USB_SUPPORT=y
+CONFIG_USB_USBNET=m
+CONFIG_USB_WDM=m
+CONFIG_VENDOR=Ralink
+CONFIG_VFAT_FS=m
+CONFIG_VIRT_TO_BUS=y
+CONFIG_VLAN_8021Q=y
+CONFIG_VLAN_8021Q_DOUBLE_TAG=y
+CONFIG_WEXT_CORE=y
+CONFIG_WEXT_PRIV=y
+CONFIG_WEXT_SPY=y
+CONFIG_WIRELESS=y
+CONFIG_WIRELESS_EXT=y
+CONFIG_WLAN=y
+CONFIG_XZ_DEC=y
+CONFIG_ZONE_DMA_FLAG=0
+CPUFLAGS='-mips32r2 -march=mips32r2'
+CPU_OVERLOAD=1
+CROSS=/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-
+CROSS_COMPILE=/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-
+CURDIR=/opt/rt-n56u/trunk/libs/libav
+CXX='/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-g++ -mips32r2 -march=mips32r2'
+CXXFLAGS='-Os -fomit-frame-pointer -pipe  -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security   '
+CXXLIBS='-Wl,-Bdynamic -lc -lgcc '
+DECODER_LIST='aasc_decoder
+amv_decoder
+anm_decoder
+asv1_decoder
+asv2_decoder
+aura_decoder
+aura2_decoder
+avs_decoder
+bethsoftvid_decoder
+bfi_decoder
+bink_decoder
+bmp_decoder
+c93_decoder
+cavs_decoder
+cdgraphics_decoder
+cinepak_decoder
+cljr_decoder
+cscd_decoder
+cyuv_decoder
+dnxhd_decoder
+dpx_decoder
+dsicinvideo_decoder
+dvvideo_decoder
+dxa_decoder
+eacmv_decoder
+eamad_decoder
+eatgq_decoder
+eatgv_decoder
+eatqi_decoder
+eightbps_decoder
+eightsvx_exp_decoder
+eightsvx_fib_decoder
+escape124_decoder
+ffv1_decoder
+ffvhuff_decoder
+flashsv_decoder
+flic_decoder
+flv_decoder
+fourxm_decoder
+fraps_decoder
+frwu_decoder
+gif_decoder
+h261_decoder
+h263_decoder
+h263i_decoder
+h264_decoder
+h264_vdpau_decoder
+huffyuv_decoder
+idcin_decoder
+iff_byterun1_decoder
+iff_ilbm_decoder
+indeo2_decoder
+indeo3_decoder
+indeo5_decoder
+interplay_video_decoder
+jpegls_decoder
+kgv1_decoder
+kmvc_decoder
+loco_decoder
+mdec_decoder
+mimic_decoder
+mjpeg_decoder
+mjpegb_decoder
+mmvideo_decoder
+motionpixels_decoder
+mpeg_xvmc_decoder
+mpeg1video_decoder
+mpeg2video_decoder
+mpeg4_decoder
+mpeg4_vdpau_decoder
+mpegvideo_decoder
+mpeg_vdpau_decoder
+mpeg1_vdpau_decoder
+msmpeg4v1_decoder
+msmpeg4v2_decoder
+msmpeg4v3_decoder
+msrle_decoder
+msvideo1_decoder
+mszh_decoder
+nuv_decoder
+pam_decoder
+pbm_decoder
+pcx_decoder
+pgm_decoder
+pgmyuv_decoder
+png_decoder
+ppm_decoder
+ptx_decoder
+qdraw_decoder
+qpeg_decoder
+qtrle_decoder
+r210_decoder
+rawvideo_decoder
+rl2_decoder
+roq_decoder
+rpza_decoder
+rv10_decoder
+rv20_decoder
+rv30_decoder
+rv40_decoder
+sgi_decoder
+smacker_decoder
+smc_decoder
+snow_decoder
+sp5x_decoder
+sunrast_decoder
+svq1_decoder
+svq3_decoder
+targa_decoder
+theora_decoder
+thp_decoder
+tiertexseqvideo_decoder
+tiff_decoder
+tmv_decoder
+truemotion1_decoder
+truemotion2_decoder
+tscc_decoder
+txd_decoder
+ulti_decoder
+v210_decoder
+v210x_decoder
+vb_decoder
+vc1_decoder
+vc1_vdpau_decoder
+vcr1_decoder
+vmdvideo_decoder
+vmnc_decoder
+vp3_decoder
+vp5_decoder
+vp6_decoder
+vp6a_decoder
+vp6f_decoder
+vqa_decoder
+wmv1_decoder
+wmv2_decoder
+wmv3_decoder
+wmv3_vdpau_decoder
+wnv1_decoder
+xan_wc3_decoder
+xl_decoder
+yop_decoder
+zlib_decoder
+zmbv_decoder
+aac_decoder
+ac3_decoder
+alac_decoder
+als_decoder
+amrnb_decoder
+ape_decoder
+atrac1_decoder
+atrac3_decoder
+binkaudio_dct_decoder
+binkaudio_rdft_decoder
+cook_decoder
+dca_decoder
+dsicinaudio_decoder
+eac3_decoder
+flac_decoder
+imc_decoder
+mace3_decoder
+mace6_decoder
+mlp_decoder
+mp1_decoder
+mp2_decoder
+mp3_decoder
+mp3adu_decoder
+mp3on4_decoder
+mpc7_decoder
+mpc8_decoder
+nellymoser_decoder
+qcelp_decoder
+qdm2_decoder
+ra_144_decoder
+ra_288_decoder
+shorten_decoder
+sipr_decoder
+smackaud_decoder
+sonic_decoder
+truehd_decoder
+truespeech_decoder
+tta_decoder
+twinvq_decoder
+vmdaudio_decoder
+vorbis_decoder
+wavpack_decoder
+wmapro_decoder
+wmav1_decoder
+wmav2_decoder
+wmavoice_decoder
+ws_snd1_decoder
+pcm_alaw_decoder
+pcm_bluray_decoder
+pcm_dvd_decoder
+pcm_f32be_decoder
+pcm_f32le_decoder
+pcm_f64be_decoder
+pcm_f64le_decoder
+pcm_mulaw_decoder
+pcm_s8_decoder
+pcm_s16be_decoder
+pcm_s16le_decoder
+pcm_s16le_planar_decoder
+pcm_s24be_decoder
+pcm_s24daud_decoder
+pcm_s24le_decoder
+pcm_s32be_decoder
+pcm_s32le_decoder
+pcm_u8_decoder
+pcm_u16be_decoder
+pcm_u16le_decoder
+pcm_u24be_decoder
+pcm_u24le_decoder
+pcm_u32be_decoder
+pcm_u32le_decoder
+pcm_zork_decoder
+interplay_dpcm_decoder
+roq_dpcm_decoder
+sol_dpcm_decoder
+xan_dpcm_decoder
+adpcm_4xm_decoder
+adpcm_adx_decoder
+adpcm_ct_decoder
+adpcm_ea_decoder
+adpcm_ea_maxis_xa_decoder
+adpcm_ea_r1_decoder
+adpcm_ea_r2_decoder
+adpcm_ea_r3_decoder
+adpcm_ea_xas_decoder
+adpcm_g726_decoder
+adpcm_ima_amv_decoder
+adpcm_ima_dk3_decoder
+adpcm_ima_dk4_decoder
+adpcm_ima_ea_eacs_decoder
+adpcm_ima_ea_sead_decoder
+adpcm_ima_iss_decoder
+adpcm_ima_qt_decoder
+adpcm_ima_smjpeg_decoder
+adpcm_ima_wav_decoder
+adpcm_ima_ws_decoder
+adpcm_ms_decoder
+adpcm_sbpro_2_decoder
+adpcm_sbpro_3_decoder
+adpcm_sbpro_4_decoder
+adpcm_swf_decoder
+adpcm_thp_decoder
+adpcm_xa_decoder
+adpcm_yamaha_decoder
+dvbsub_decoder
+dvdsub_decoder
+pgssub_decoder
+xsub_decoder
+libdirac_decoder
+libfaad_decoder
+libgsm_decoder
+libgsm_ms_decoder
+libopencore_amrnb_decoder
+libopencore_amrwb_decoder
+libopenjpeg_decoder
+libschroedinger_decoder
+libspeex_decoder
+libvpx_decoder'
+DEMUXER_LIST='aac_demuxer
+ac3_demuxer
+aea_demuxer
+aiff_demuxer
+amr_demuxer
+anm_demuxer
+apc_demuxer
+ape_demuxer
+asf_demuxer
+ass_demuxer
+au_demuxer
+avi_demuxer
+avisynth_demuxer
+avs_demuxer
+bethsoftvid_demuxer
+bfi_demuxer
+bink_demuxer
+c93_demuxer
+caf_demuxer
+cavsvideo_demuxer
+cdg_demuxer
+daud_demuxer
+dirac_demuxer
+dnxhd_demuxer
+dsicin_demuxer
+dts_demuxer
+dv_demuxer
+dxa_demuxer
+ea_demuxer
+ea_cdata_demuxer
+eac3_demuxer
+ffm_demuxer
+filmstrip_demuxer
+flac_demuxer
+flic_demuxer
+flv_demuxer
+fourxm_demuxer
+gsm_demuxer
+gxf_demuxer
+h261_demuxer
+h263_demuxer
+h264_demuxer
+idcin_demuxer
+iff_demuxer
+image2_demuxer
+image2pipe_demuxer
+ingenient_demuxer
+ipmovie_demuxer
+iss_demuxer
+iv8_demuxer
+lmlm4_demuxer
+m4v_demuxer
+matroska_demuxer
+mjpeg_demuxer
+mlp_demuxer
+mm_demuxer
+mmf_demuxer
+mov_demuxer
+mp3_demuxer
+mpc_demuxer
+mpc8_demuxer
+mpegps_demuxer
+mpegts_demuxer
+mpegtsraw_demuxer
+mpegvideo_demuxer
+msnwc_tcp_demuxer
+mtv_demuxer
+mvi_demuxer
+mxf_demuxer
+nc_demuxer
+nsv_demuxer
+nut_demuxer
+nuv_demuxer
+ogg_demuxer
+oma_demuxer
+pcm_alaw_demuxer
+pcm_mulaw_demuxer
+pcm_f64be_demuxer
+pcm_f64le_demuxer
+pcm_f32be_demuxer
+pcm_f32le_demuxer
+pcm_s32be_demuxer
+pcm_s32le_demuxer
+pcm_s24be_demuxer
+pcm_s24le_demuxer
+pcm_s16be_demuxer
+pcm_s16le_demuxer
+pcm_s8_demuxer
+pcm_u32be_demuxer
+pcm_u32le_demuxer
+pcm_u24be_demuxer
+pcm_u24le_demuxer
+pcm_u16be_demuxer
+pcm_u16le_demuxer
+pcm_u8_demuxer
+pva_demuxer
+qcp_demuxer
+r3d_demuxer
+rawvideo_demuxer
+rl2_demuxer
+rm_demuxer
+roq_demuxer
+rpl_demuxer
+rtsp_demuxer
+sdp_demuxer
+segafilm_demuxer
+shorten_demuxer
+siff_demuxer
+smacker_demuxer
+sol_demuxer
+sox_demuxer
+str_demuxer
+swf_demuxer
+thp_demuxer
+tiertexseq_demuxer
+tmv_demuxer
+truehd_demuxer
+tta_demuxer
+txd_demuxer
+vc1_demuxer
+vc1t_demuxer
+vmd_demuxer
+voc_demuxer
+vqf_demuxer
+w64_demuxer
+wav_demuxer
+wc3_demuxer
+wsaud_demuxer
+wsvqa_demuxer
+wv_demuxer
+xa_demuxer
+yop_demuxer
+yuv4mpegpipe_demuxer
+libnut_demuxer'
+DEPEND_CMD='$(DEPCC) $(DEPFLAGS) $< | sed -e "/^\#.*/d" -e "s,^[[:space:]]*$(*F)\\.o,$(@D)/$(*F).o," > $(@:.o=.d)'
+DEPFLAGS='$(CPPFLAGS) $(CFLAGS) -MM'
+DESTDIR=/opt/rt-n56u/trunk/stage
+DIRS='libc libs user'
+DIRSTACK=()
+DISPLAY=:0
+E1=0
+E2=1
+ELF2FLT=elf2flt
+ENCODER_LIST='asv1_encoder
+asv2_encoder
+bmp_encoder
+dnxhd_encoder
+dvvideo_encoder
+ffv1_encoder
+ffvhuff_encoder
+flashsv_encoder
+flv_encoder
+gif_encoder
+h261_encoder
+h263_encoder
+h263p_encoder
+huffyuv_encoder
+jpegls_encoder
+ljpeg_encoder
+mjpeg_encoder
+mpeg1video_encoder
+mpeg2video_encoder
+mpeg4_encoder
+msmpeg4v1_encoder
+msmpeg4v2_encoder
+msmpeg4v3_encoder
+pam_encoder
+pbm_encoder
+pcx_encoder
+pgm_encoder
+pgmyuv_encoder
+png_encoder
+ppm_encoder
+qtrle_encoder
+rawvideo_encoder
+roq_encoder
+rv10_encoder
+rv20_encoder
+sgi_encoder
+snow_encoder
+svq1_encoder
+targa_encoder
+tiff_encoder
+v210_encoder
+wmv1_encoder
+wmv2_encoder
+zlib_encoder
+zmbv_encoder
+aac_encoder
+ac3_encoder
+alac_encoder
+flac_encoder
+mp2_encoder
+nellymoser_encoder
+sonic_encoder
+sonic_ls_encoder
+wmav1_encoder
+wmav2_encoder
+pcm_alaw_encoder
+pcm_f32be_encoder
+pcm_f32le_encoder
+pcm_f64be_encoder
+pcm_f64le_encoder
+pcm_mulaw_encoder
+pcm_s8_encoder
+pcm_s16be_encoder
+pcm_s16le_encoder
+pcm_s24be_encoder
+pcm_s24daud_encoder
+pcm_s24le_encoder
+pcm_s32be_encoder
+pcm_s32le_encoder
+pcm_u8_encoder
+pcm_u16be_encoder
+pcm_u16le_encoder
+pcm_u24be_encoder
+pcm_u24le_encoder
+pcm_u32be_encoder
+pcm_u32le_encoder
+pcm_zork_encoder
+roq_dpcm_encoder
+adpcm_adx_encoder
+adpcm_g726_encoder
+adpcm_ima_qt_encoder
+adpcm_ima_wav_encoder
+adpcm_ms_encoder
+adpcm_swf_encoder
+adpcm_yamaha_encoder
+dvbsub_encoder
+dvdsub_encoder
+xsub_encoder
+libdirac_encoder
+libfaac_encoder
+libgsm_encoder
+libgsm_ms_encoder
+libmp3lame_encoder
+libopencore_amrnb_encoder
+libschroedinger_encoder
+libtheora_encoder
+libvo_aacenc_encoder
+libvorbis_encoder
+libvpx_encoder
+libx264_encoder
+libxvid_encoder'
+ENDIAN=little
+EUID=0
+EXTRA_CFLAGS='-Dlinux -mips32r2 -march=mips32r2'
+FFMPEG_CONFIGURATION='--prefix=/opt/rt-n56u/trunk/stage --cross-prefix=/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc- --enable-cross-compile --arch=mips --target-os=linux --cc='\''/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2'\'' --as='\''/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-as -mips32r2 -march=mips32r2'\'' --enable-static --disable-shared --enable-small --enable-pthreads --enable-gpl --enable-zlib --disable-doc --disable-debug --disable-avdevice --disable-network --disable-swscale --disable-swscale-alpha --disable-ffmpeg --disable-ffplay --disable-ffprobe --disable-ffserver --disable-hwaccels --disable-dxva2 --disable-indevs --disable-outdevs --disable-devices --disable-filters --disable-encoders --disable-muxers --disable-decoders --disable-demuxers --disable-parsers --disable-postproc --disable-protocols --disable-bsfs --disable-everything --enable-protocol=file --enable-parser=aac --enable-parser=ac3 --enable-parser=mpegaudio --enable-demuxer=aac --enable-demuxer=ac3 --enable-demuxer=asf --enable-demuxer=avi --enable-demuxer=dts --enable-demuxer=eac3 --enable-demuxer=flac --enable-demuxer=flv --enable-demuxer=h264 --enable-demuxer=m4v --enable-demuxer=matroska --enable-demuxer=mov --enable-demuxer=mp3 --enable-demuxer=mpegps --enable-demuxer=mpegts --enable-demuxer=mpegvideo --enable-demuxer=ogg --enable-demuxer=wav'
+FFSERVERLDFLAGS=-Wl,-E
+FILTER_LIST='aspect_filter
+crop_filter
+format_filter
+noformat_filter
+null_filter
+pixelaspect_filter
+scale_filter
+slicify_filter
+unsharp_filter
+vflip_filter
+nullsrc_filter
+nullsink_filter'
+FIRMWARE_BUILDS_REV=
+FIRMWARE_BUILDS_VER=00
+FIRMWARE_KERNEL_VER='"1.00"'
+FIRMWARE_ROOTFS_VER=0.0
+FULLNAME='$(NAME)$(BUILDSUF)'
+GCC='/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2'
+GCC_DIR=..
+GNUMAKEFLAGS=
+GROUPS=()
+HAVE_LIST='
+    
+    altivec
+    amd3dnow
+    amd3dnowext
+    armv5te
+    armv6
+    armv6t2
+    armvfp
+    iwmmxt
+    mmi
+    mmx
+    mmx2
+    neon
+    ppc4xx
+    sse
+    ssse3
+    vis
+
+    
+    bigendian
+
+    
+    beosthreads
+    os2threads
+    pthreads
+    w32threads
+
+    alsa_asoundlib_h
+    altivec_h
+    arpa_inet_h
+    attribute_may_alias
+    attribute_packed
+    bswap
+    closesocket
+    cmov
+    conio_h
+    dcbzl
+    dev_bktr_ioctl_bt848_h
+    dev_bktr_ioctl_meteor_h
+    dev_ic_bt8xx_h
+    dev_video_meteor_ioctl_meteor_h
+    dev_video_bktr_ioctl_bt848_h
+    dlfcn_h
+    dlopen
+    dos_paths
+    dxva_h
+    ebp_available
+    ebx_available
+    exp2
+    exp2f
+    fast_64bit
+    fast_clz
+    fast_cmov
+    fast_unaligned
+    fork
+    getaddrinfo
+    gethrtime
+    GetProcessMemoryInfo
+    GetProcessTimes
+    getrusage
+    struct_rusage_ru_maxrss
+    inet_aton
+    inline_asm
+    isatty
+    ldbrx
+    libdc1394_1
+    libdc1394_2
+    llrint
+    llrintf
+    local_aligned_16
+    local_aligned_8
+    log2
+    log2f
+    loongson
+    lrint
+    lrintf
+    lzo1x_999_compress
+    machine_ioctl_bt848_h
+    machine_ioctl_meteor_h
+    malloc_h
+    memalign
+    mkstemp
+    pld
+    posix_memalign
+    round
+    roundf
+    sdl
+    sdl_video_size
+    setmode
+    socklen_t
+    soundcard_h
+    poll_h
+    setrlimit
+    strerror_r
+    struct_addrinfo
+    struct_ipv6_mreq
+    struct_sockaddr_in6
+    struct_sockaddr_sa_len
+    struct_sockaddr_storage
+    symver
+    symver_gnu_asm
+    symver_asm_label
+    sys_mman_h
+    sys_resource_h
+    sys_select_h
+    sys_soundcard_h
+    sys_videoio_h
+    ten_operands
+    termios_h
+    threads
+    truncf
+    vfp_args
+    VirtualAlloc
+    winsock2_h
+    xform_asm
+    yasm
+'
+HAVE_LIST_PUB='
+    bigendian
+'
+HOME=/home/mustapha
+HOSTCC=gcc
+HOSTNAME=mustapha-virtual-machine
+HOSTTYPE=x86_64
+HOST_BUILD=x86_64-pc-linux-gnu
+HOST_NCPU=4
+HOST_TARGET=mipsel-linux
+HWACCEL_LIST='h263_vaapi_hwaccel
+h264_dxva2_hwaccel
+h264_vaapi_hwaccel
+mpeg2_vaapi_hwaccel
+mpeg4_vaapi_hwaccel
+vc1_dxva2_hwaccel
+vc1_vaapi_hwaccel
+wmv3_dxva2_hwaccel
+wmv3_vaapi_hwaccel'
+IFS=' 	
+'
+IMAGEDIR=/opt/rt-n56u/trunk/images
+INDEV_LIST='alsa_indev
+audio_beos_indev
+bktr_indev
+dv1394_indev
+jack_indev
+oss_indev
+v4l2_indev
+v4l_indev
+vfwcap_indev
+x11_grab_device_indev
+libdc1394_indev'
+KERNEL_CROSS_COMPILE=/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-
+KERNEL_HEADERS_PATH=/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/include
+LANG=en_US.UTF-8
+LANGUAGE=en_US
+LC_ADDRESS=zh_CN.UTF-8
+LC_ALL=C
+LC_IDENTIFICATION=zh_CN.UTF-8
+LC_MEASUREMENT=zh_CN.UTF-8
+LC_MONETARY=zh_CN.UTF-8
+LC_NAME=zh_CN.UTF-8
+LC_NUMERIC=zh_CN.UTF-8
+LC_PAPER=zh_CN.UTF-8
+LC_TELEPHONE=zh_CN.UTF-8
+LC_TIME=zh_CN.UTF-8
+LD=/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-ld
+LDFLAGS='-L/opt/rt-n56u/trunk/stage/lib -Wl,--gc-sections'
+LIBAES=-laes
+LIBATM=-latm
+LIBC=-lc
+LIBCRYPT=-lcrypt
+LIBCRYPTO=-lcrypto
+LIBCURL=-lcurl
+LIBDES=-ldes
+LIBDL=-ldl
+LIBEVENT=-levent
+LIBEXPAT=-lexpat
+LIBFLEX=-lfl
+LIBGCC=-lgcc
+LIBIBERTY=-liberty
+LIBICONV=-liconv
+LIBINTL=-lintl
+LIBIO=-lio
+LIBIOSTREAM=-liostream
+LIBIXML=-lixml
+LIBJPEG=-ljpeg
+LIBM=-lm
+LIBNAME='$(LIBPREF)$(FULLNAME)$(LIBSUF)'
+LIBNET=-lnet
+LIBNETOLD=-lnetold
+LIBPCAP=-lpcap
+LIBPNG=-lpng
+LIBPREF=lib
+LIBPTHREAD=-lpthread
+LIBSSL=-lssl
+LIBSTDCPP='-Wl,-Bstatic -lstdc++ -Wl,-Bdynamic'
+LIBSUF=.a
+LIBS_INCLUDE_LIBICONV=y
+LIBS_INCLUDE_LIBLZO=y
+LIBS_INCLUDE_LIBSSL=y
+LIBS_INCLUDE_LIBUSB_0=y
+LIBS_INCLUDE_LIBUSB_1=y
+LIBS_INCLUDE_MEDIA=y
+LIBTCL=-ltcl
+LIBTHREADUTIL=-lthreadutil
+LIBUPNP=-lupnp
+LIBUSB=-lusb
+LIBUTIL=-lutil
+LIBZ=-lz
+LIB_INSTALL_EXTRA_CMD='$$(RANLIB) "$(LIBDIR)/$(LIBNAME)"'
+LINUXDIR=linux-3.4.x
+LINUXINCDIR=/opt/rt-n56u/trunk/linux-3.4.x/include
+LINUX_CONFIG=/opt/rt-n56u/trunk/linux-3.4.x/.config
+LOGNAME=root
+LOPT=-Os
+LS_COLORS='rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'
+MACHINE=mips
+MACHTYPE=x86_64-pc-linux-gnu
+MACH_DIR=.
+MAIL=/var/mail/root
+MAKEARCH='make ARCH=mips CROSS_COMPILE=/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-'
+MAKEARCH_KERNEL='make ARCH=mips CROSS_COMPILE=/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-'
+MAKEFILE_LIST=' Makefile'
+MAKEFLAGS='w -- CROSS_COMPILE=/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc- ARCH=mips'
+MAKELEVEL=4
+MAKEOVERRIDES='${-*-command-variables-*-}'
+MAKE_TERMERR=/dev/pts/1
+MAKE_TERMOUT=/dev/pts/1
+MFLAGS=-w
+MUXER_LIST='ac3_muxer
+adts_muxer
+aiff_muxer
+amr_muxer
+asf_muxer
+ass_muxer
+asf_stream_muxer
+au_muxer
+avi_muxer
+avm2_muxer
+crc_muxer
+daud_muxer
+dirac_muxer
+dnxhd_muxer
+dts_muxer
+dv_muxer
+eac3_muxer
+ffm_muxer
+filmstrip_muxer
+flac_muxer
+flv_muxer
+framecrc_muxer
+gif_muxer
+gxf_muxer
+h261_muxer
+h263_muxer
+h264_muxer
+image2_muxer
+image2pipe_muxer
+ipod_muxer
+m4v_muxer
+matroska_muxer
+matroska_audio_muxer
+mjpeg_muxer
+mlp_muxer
+mmf_muxer
+mov_muxer
+mp2_muxer
+mp3_muxer
+mp4_muxer
+mpeg1system_muxer
+mpeg1vcd_muxer
+mpeg1video_muxer
+mpeg2dvd_muxer
+mpeg2svcd_muxer
+mpeg2video_muxer
+mpeg2vob_muxer
+mpegts_muxer
+mpjpeg_muxer
+mxf_muxer
+mxf_d10_muxer
+null_muxer
+nut_muxer
+ogg_muxer
+pcm_alaw_muxer
+pcm_mulaw_muxer
+pcm_f64be_muxer
+pcm_f64le_muxer
+pcm_f32be_muxer
+pcm_f32le_muxer
+pcm_s32be_muxer
+pcm_s32le_muxer
+pcm_s24be_muxer
+pcm_s24le_muxer
+pcm_s16be_muxer
+pcm_s16le_muxer
+pcm_s8_muxer
+pcm_u32be_muxer
+pcm_u32le_muxer
+pcm_u24be_muxer
+pcm_u24le_muxer
+pcm_u16be_muxer
+pcm_u16le_muxer
+pcm_u8_muxer
+psp_muxer
+rawvideo_muxer
+rm_muxer
+roq_muxer
+rtp_muxer
+rtsp_muxer
+sox_muxer
+spdif_muxer
+swf_muxer
+tg2_muxer
+tgp_muxer
+truehd_muxer
+vc1t_muxer
+voc_muxer
+wav_muxer
+webm_muxer
+yuv4mpegpipe_muxer
+libnut_muxer'
+NM=/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-nm
+OBJCOPY=/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-objcopy
+OPTERR=1
+OPTIND=1
+OSTYPE=linux-gnu
+OUTDEV_LIST='alsa_outdev
+audio_beos_outdev
+oss_outdev'
+PARSER_LIST='aac_parser
+ac3_parser
+cavsvideo_parser
+dca_parser
+dirac_parser
+dnxhd_parser
+dvbsub_parser
+dvdsub_parser
+h261_parser
+h263_parser
+h264_parser
+mjpeg_parser
+mlp_parser
+mpeg4video_parser
+mpegaudio_parser
+mpegvideo_parser
+pnm_parser
+vc1_parser
+vp3_parser'
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin:/opt/rt-n56u/trunk/tools
+PATHS_LIST='
+    bindir
+    datadir
+    incdir
+    libdir
+    mandir
+    prefix
+    shlibdir
+'
+PIPESTATUS=([0]="0")
+POSIXLY_CORRECT=y
+PPID=106907
+PRODUCT=
+PROJECT_CONFIG=/opt/rt-n56u/trunk/.config
+PROTOCOL_LIST='file_protocol
+gopher_protocol
+http_protocol
+pipe_protocol
+rtmp_protocol
+rtmpt_protocol
+rtmpe_protocol
+rtmpte_protocol
+rtmps_protocol
+rtp_protocol
+tcp_protocol
+udp_protocol
+concat_protocol'
+PS4='+ '
+PWD=/opt/rt-n56u/trunk/libs/libav/ffmpeg-0.6.x
+RANLIB=/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-ranlib
+RELFILES='boot/boot.bin boot/boot.elf images/image.bin images/flash.bin linux-3.4.x/linux'
+ROMFSDIR=/opt/rt-n56u/trunk/romfs
+ROMFSINST=/opt/rt-n56u/trunk/tools/romfs-inst.sh
+ROOTDIR=/opt/rt-n56u/trunk
+SCRIPTSDIR=/opt/rt-n56u/trunk/config/scripts
+SHELL=/bin/bash
+SHELLOPTS=braceexpand:hashall:interactive-comments:posix
+SHFLAGS='-shared -Wl,-soname,$$(@F)'
+SHLVL=6
+SLIBAES=-laes
+SLIBATM=-latm
+SLIBC=-lc
+SLIBCRYPT='-Wl,-Bstatic -Wl,-Bstatic -lcrypt'
+SLIBCRYPTO=-lcrypto
+SLIBCURL=-lcurl
+SLIBDES=-ldes
+SLIBEVENT=-levent
+SLIBEXPAT=-lexpat
+SLIBFLEX=-lfl
+SLIBICONV=-liconv
+SLIBINTL=-lintl
+SLIBIXML=-lixml
+SLIBJPEG=-ljpeg
+SLIBM=-lm
+SLIBNAME='$(SLIBPREF)$(FULLNAME)$(SLIBSUF)'
+SLIBNAME_WITH_MAJOR='$(SLIBNAME).$(LIBMAJOR)'
+SLIBNAME_WITH_VERSION='$(SLIBNAME).$(LIBVERSION)'
+SLIBNET=-lnet
+SLIBNETOLD=-lnetold
+SLIBPCAP=-lpcap
+SLIBPNG=-lpng
+SLIBPREF=lib
+SLIBPTHREAD=-lpthread
+SLIBSSL=-lssl
+SLIBSTDCPP='-Wl,-Bstatic -lstdc++ -Wl,-Bdynamic'
+SLIBSUF=.so
+SLIBTHREADUTIL=-lthreadutil
+SLIBUPNP=-lupnp
+SLIBUSB=-lusb
+SLIBZ=-lz
+SSTRIP_TOOL=
+STAGEDIR=/opt/rt-n56u/trunk/stage
+STL_INCDIR=/opt/rt-n56u/trunk/include/STLport
+STL_LIBDIR=/opt/rt-n56u/trunk/lib/STLport/lib
+STORAGE_ENABLED=y
+STRIP=/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-strip
+STRIPTOOL=/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-strip
+SUDO_COMMAND=./build_firmware
+SUDO_GID=1000
+SUDO_UID=1000
+SUDO_USER=mustapha
+TERM=xterm-256color
+TFTPDIR=/tftpboot
+THREADS_LIST='
+    beosthreads
+    os2threads
+    pthreads
+    w32threads
+'
+UCLINUX_BUILD_LIB=1
+UCLINUX_BUILD_SET=1
+UCLINUX_COMMON_LIB=1
+UID=0
+UOPT=-Os
+USER=root
+USERNAME=root
+VENDOR=
+VENDOR_CFLAGS=
+VERSIONPKG=1.1
+VERSIONSTR='Ralink/RT3883 Version 1.1'
+XAUTHORITY=/home/mustapha/.Xauthority
+_='# ./configure --prefix=/opt/rt-n56u/trunk/stage --cross-prefix=/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc- --enable-cross-compile --arch=mips --target-os=linux --cc='\''/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2'\'' --as='\''/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-as -mips32r2 -march=mips32r2'\'' --enable-static --disable-shared --enable-small --enable-pthreads --enable-gpl --enable-zlib --disable-doc --disable-debug --disable-avdevice --disable-network --disable-swscale --disable-swscale-alpha --disable-ffmpeg --disable-ffplay --disable-ffprobe --disable-ffserver --disable-hwaccels --disable-dxva2 --disable-indevs --disable-outdevs --disable-devices --disable-filters --disable-encoders --disable-muxers --disable-decoders --disable-demuxers --disable-parsers --disable-postproc --disable-protocols --disable-bsfs --disable-everything --enable-protocol=file --enable-parser=aac --enable-parser=ac3 --enable-parser=mpegaudio --enable-demuxer=aac --enable-demuxer=ac3 --enable-demuxer=asf --enable-demuxer=avi --enable-demuxer=dts --enable-demuxer=eac3 --enable-demuxer=flac --enable-demuxer=flv --enable-demuxer=h264 --enable-demuxer=m4v --enable-demuxer=matroska --enable-demuxer=mov --enable-demuxer=mp3 --enable-demuxer=mpegps --enable-demuxer=mpegts --enable-demuxer=mpegvideo --enable-demuxer=ogg --enable-demuxer=wav'
+aac_adtstoasc_bsf=no
+aac_adtstoasc_bsf_select=aac_parser
+aac_decoder=no
+aac_decoder_select='mdct rdft aac_parser'
+aac_demuxer=yes
+aac_encoder=no
+aac_encoder_select=mdct
+aac_parser=yes
+aasc_decoder=no
+ac3_decoder=no
+ac3_decoder_select='mdct ac3_parser'
+ac3_demuxer=yes
+ac3_demuxer_deps=ac3_parser
+ac3_encoder=no
+ac3_muxer=no
+ac3_parser=yes
+action=enable
+adpcm_4xm_decoder=no
+adpcm_adx_decoder=no
+adpcm_adx_encoder=no
+adpcm_ct_decoder=no
+adpcm_ea_decoder=no
+adpcm_ea_maxis_xa_decoder=no
+adpcm_ea_r1_decoder=no
+adpcm_ea_r2_decoder=no
+adpcm_ea_r3_decoder=no
+adpcm_ea_xas_decoder=no
+adpcm_g726_decoder=no
+adpcm_g726_encoder=no
+adpcm_ima_amv_decoder=no
+adpcm_ima_dk3_decoder=no
+adpcm_ima_dk4_decoder=no
+adpcm_ima_ea_eacs_decoder=no
+adpcm_ima_ea_sead_decoder=no
+adpcm_ima_iss_decoder=no
+adpcm_ima_qt_decoder=no
+adpcm_ima_qt_encoder=no
+adpcm_ima_smjpeg_decoder=no
+adpcm_ima_wav_decoder=no
+adpcm_ima_wav_encoder=no
+adpcm_ima_ws_decoder=no
+adpcm_ms_decoder=no
+adpcm_ms_encoder=no
+adpcm_sbpro_2_decoder=no
+adpcm_sbpro_3_decoder=no
+adpcm_sbpro_4_decoder=no
+adpcm_swf_decoder=no
+adpcm_swf_encoder=no
+adpcm_thp_decoder=no
+adpcm_xa_decoder=no
+adpcm_yamaha_decoder=no
+adpcm_yamaha_encoder=no
+adts_muxer=no
+aea_demuxer=no
+aiff_demuxer=no
+aiff_muxer=no
+alac_decoder=no
+alac_encoder=no
+alac_encoder_select=lpc
+als_decoder=no
+alsa_indev=no
+alsa_indev_deps='alsa_asoundlib_h snd_pcm_htimestamp'
+alsa_indev_extralibs=-lasound
+alsa_outdev=no
+alsa_outdev_deps=alsa_asoundlib_h
+alsa_outdev_extralibs=-lasound
+altivec=yes
+altivec_deps=ppc
+amd3dnow=yes
+amd3dnow_deps=mmx
+amd3dnowext=yes
+amd3dnowext_deps=amd3dnow
+amr_demuxer=no
+amr_muxer=no
+amrnb_decoder=no
+amrnb_decoder_select=lsp
+amv_decoder=no
+anm_decoder=no
+anm_demuxer=no
+apc_demuxer=no
+ape_decoder=no
+ape_demuxer=no
+ar_default=ar
+arch=mips
+arch_default=x86_64
+armv5te=yes
+armv5te_deps=arm
+armv6=yes
+armv6_deps=arm
+armv6t2=yes
+armv6t2_deps=arm
+armvfp=yes
+armvfp_deps=arm
+as='/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-as -mips32r2 -march=mips32r2'
+asf_demuxer=yes
+asf_muxer=no
+asf_stream_muxer=no
+asf_stream_muxer_select=asf_muxer
+asm=yes
+aspect_filter=no
+ass_demuxer=no
+ass_muxer=no
+asv1_decoder=no
+asv1_encoder=no
+asv2_decoder=no
+asv2_encoder=no
+atrac1_decoder=no
+atrac1_decoder_select=mdct
+atrac3_decoder=no
+atrac3_decoder_select=mdct
+au_demuxer=no
+au_muxer=no
+audio_beos_indev=no
+audio_beos_indev_deps=audio_beos
+audio_beos_indev_extralibs='-lmedia -lbe'
+audio_beos_outdev=no
+audio_beos_outdev_deps=audio_beos
+audio_beos_outdev_extralibs='-lmedia -lbe'
+aura2_decoder=no
+aura_decoder=no
+avcodec=yes
+avdevice=no
+avdevice_deps='avcodec avformat'
+avfilter_lavf_deps=avformat
+avformat=yes
+avformat_deps=avcodec
+avi_demuxer=yes
+avi_muxer=no
+avisynth_demuxer=no
+avisynth_demuxer_deps=avisynth
+avm2_muxer=no
+avs_decoder=no
+avs_demuxer=no
+avutil=yes
+bethsoftvid_decoder=no
+bethsoftvid_demuxer=no
+bfi_decoder=no
+bfi_demuxer=no
+bindir_default='${prefix}/bin'
+bink_decoder=no
+bink_demuxer=no
+binkaudio_dct_decoder=no
+binkaudio_dct_decoder_select='mdct rdft dct'
+binkaudio_rdft_decoder=no
+binkaudio_rdft_decoder_select='mdct rdft'
+bktr_indev=no
+bktr_indev_deps_any='dev_bktr_ioctl_bt848_h machine_ioctl_bt848_h dev_video_bktr_ioctl_bt848_h dev_ic_bt8xx_h'
+bmp_decoder=no
+bmp_encoder=no
+bsfs_if_any='aac_adtstoasc_bsf
+dump_extradata_bsf
+h264_mp4toannexb_bsf
+imx_dump_header_bsf
+mjpega_dump_header_bsf
+mp3_header_compress_bsf
+mp3_header_decompress_bsf
+mov2textsub_bsf
+noise_bsf
+remove_extradata_bsf
+text2movsub_bsf'
+c93_decoder=no
+c93_demuxer=no
+caf_demuxer=no
+cavs_decoder=no
+cavs_decoder_select=golomb
+cavsvideo_demuxer=no
+cavsvideo_parser=no
+cc='/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2'
+cc_default=gcc
+cc_version='"unknown"'
+cdg_demuxer=no
+cdgraphics_decoder=no
+cinepak_decoder=no
+cljr_decoder=no
+concat_protocol=no
+cook_decoder=no
+cook_decoder_select=mdct
+cpu=generic
+crc_muxer=no
+crop_filter=no
+cross_compile=yes
+cross_prefix=/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-
+cscd_decoder=no
+cscd_decoder_suggest=zlib
+cyuv_decoder=no
+datadir_default='${prefix}/share/ffmpeg'
+daud_demuxer=no
+daud_muxer=no
+dca_decoder=no
+dca_decoder_select=mdct
+dca_parser=no
+debug=no
+decoders_if_any='aasc_decoder
+amv_decoder
+anm_decoder
+asv1_decoder
+asv2_decoder
+aura_decoder
+aura2_decoder
+avs_decoder
+bethsoftvid_decoder
+bfi_decoder
+bink_decoder
+bmp_decoder
+c93_decoder
+cavs_decoder
+cdgraphics_decoder
+cinepak_decoder
+cljr_decoder
+cscd_decoder
+cyuv_decoder
+dnxhd_decoder
+dpx_decoder
+dsicinvideo_decoder
+dvvideo_decoder
+dxa_decoder
+eacmv_decoder
+eamad_decoder
+eatgq_decoder
+eatgv_decoder
+eatqi_decoder
+eightbps_decoder
+eightsvx_exp_decoder
+eightsvx_fib_decoder
+escape124_decoder
+ffv1_decoder
+ffvhuff_decoder
+flashsv_decoder
+flic_decoder
+flv_decoder
+fourxm_decoder
+fraps_decoder
+frwu_decoder
+gif_decoder
+h261_decoder
+h263_decoder
+h263i_decoder
+h264_decoder
+h264_vdpau_decoder
+huffyuv_decoder
+idcin_decoder
+iff_byterun1_decoder
+iff_ilbm_decoder
+indeo2_decoder
+indeo3_decoder
+indeo5_decoder
+interplay_video_decoder
+jpegls_decoder
+kgv1_decoder
+kmvc_decoder
+loco_decoder
+mdec_decoder
+mimic_decoder
+mjpeg_decoder
+mjpegb_decoder
+mmvideo_decoder
+motionpixels_decoder
+mpeg_xvmc_decoder
+mpeg1video_decoder
+mpeg2video_decoder
+mpeg4_decoder
+mpeg4_vdpau_decoder
+mpegvideo_decoder
+mpeg_vdpau_decoder
+mpeg1_vdpau_decoder
+msmpeg4v1_decoder
+msmpeg4v2_decoder
+msmpeg4v3_decoder
+msrle_decoder
+msvideo1_decoder
+mszh_decoder
+nuv_decoder
+pam_decoder
+pbm_decoder
+pcx_decoder
+pgm_decoder
+pgmyuv_decoder
+png_decoder
+ppm_decoder
+ptx_decoder
+qdraw_decoder
+qpeg_decoder
+qtrle_decoder
+r210_decoder
+rawvideo_decoder
+rl2_decoder
+roq_decoder
+rpza_decoder
+rv10_decoder
+rv20_decoder
+rv30_decoder
+rv40_decoder
+sgi_decoder
+smacker_decoder
+smc_decoder
+snow_decoder
+sp5x_decoder
+sunrast_decoder
+svq1_decoder
+svq3_decoder
+targa_decoder
+theora_decoder
+thp_decoder
+tiertexseqvideo_decoder
+tiff_decoder
+tmv_decoder
+truemotion1_decoder
+truemotion2_decoder
+tscc_decoder
+txd_decoder
+ulti_decoder
+v210_decoder
+v210x_decoder
+vb_decoder
+vc1_decoder
+vc1_vdpau_decoder
+vcr1_decoder
+vmdvideo_decoder
+vmnc_decoder
+vp3_decoder
+vp5_decoder
+vp6_decoder
+vp6a_decoder
+vp6f_decoder
+vqa_decoder
+wmv1_decoder
+wmv2_decoder
+wmv3_decoder
+wmv3_vdpau_decoder
+wnv1_decoder
+xan_wc3_decoder
+xl_decoder
+yop_decoder
+zlib_decoder
+zmbv_decoder
+aac_decoder
+ac3_decoder
+alac_decoder
+als_decoder
+amrnb_decoder
+ape_decoder
+atrac1_decoder
+atrac3_decoder
+binkaudio_dct_decoder
+binkaudio_rdft_decoder
+cook_decoder
+dca_decoder
+dsicinaudio_decoder
+eac3_decoder
+flac_decoder
+imc_decoder
+mace3_decoder
+mace6_decoder
+mlp_decoder
+mp1_decoder
+mp2_decoder
+mp3_decoder
+mp3adu_decoder
+mp3on4_decoder
+mpc7_decoder
+mpc8_decoder
+nellymoser_decoder
+qcelp_decoder
+qdm2_decoder
+ra_144_decoder
+ra_288_decoder
+shorten_decoder
+sipr_decoder
+smackaud_decoder
+sonic_decoder
+truehd_decoder
+truespeech_decoder
+tta_decoder
+twinvq_decoder
+vmdaudio_decoder
+vorbis_decoder
+wavpack_decoder
+wmapro_decoder
+wmav1_decoder
+wmav2_decoder
+wmavoice_decoder
+ws_snd1_decoder
+pcm_alaw_decoder
+pcm_bluray_decoder
+pcm_dvd_decoder
+pcm_f32be_decoder
+pcm_f32le_decoder
+pcm_f64be_decoder
+pcm_f64le_decoder
+pcm_mulaw_decoder
+pcm_s8_decoder
+pcm_s16be_decoder
+pcm_s16le_decoder
+pcm_s16le_planar_decoder
+pcm_s24be_decoder
+pcm_s24daud_decoder
+pcm_s24le_decoder
+pcm_s32be_decoder
+pcm_s32le_decoder
+pcm_u8_decoder
+pcm_u16be_decoder
+pcm_u16le_decoder
+pcm_u24be_decoder
+pcm_u24le_decoder
+pcm_u32be_decoder
+pcm_u32le_decoder
+pcm_zork_decoder
+interplay_dpcm_decoder
+roq_dpcm_decoder
+sol_dpcm_decoder
+xan_dpcm_decoder
+adpcm_4xm_decoder
+adpcm_adx_decoder
+adpcm_ct_decoder
+adpcm_ea_decoder
+adpcm_ea_maxis_xa_decoder
+adpcm_ea_r1_decoder
+adpcm_ea_r2_decoder
+adpcm_ea_r3_decoder
+adpcm_ea_xas_decoder
+adpcm_g726_decoder
+adpcm_ima_amv_decoder
+adpcm_ima_dk3_decoder
+adpcm_ima_dk4_decoder
+adpcm_ima_ea_eacs_decoder
+adpcm_ima_ea_sead_decoder
+adpcm_ima_iss_decoder
+adpcm_ima_qt_decoder
+adpcm_ima_smjpeg_decoder
+adpcm_ima_wav_decoder
+adpcm_ima_ws_decoder
+adpcm_ms_decoder
+adpcm_sbpro_2_decoder
+adpcm_sbpro_3_decoder
+adpcm_sbpro_4_decoder
+adpcm_swf_decoder
+adpcm_thp_decoder
+adpcm_xa_decoder
+adpcm_yamaha_decoder
+dvbsub_decoder
+dvdsub_decoder
+pgssub_decoder
+xsub_decoder
+libdirac_decoder
+libfaad_decoder
+libgsm_decoder
+libgsm_ms_decoder
+libopencore_amrnb_decoder
+libopencore_amrwb_decoder
+libopenjpeg_decoder
+libschroedinger_decoder
+libspeex_decoder
+libvpx_decoder'
+demuxers_if_any='aac_demuxer
+ac3_demuxer
+aea_demuxer
+aiff_demuxer
+amr_demuxer
+anm_demuxer
+apc_demuxer
+ape_demuxer
+asf_demuxer
+ass_demuxer
+au_demuxer
+avi_demuxer
+avisynth_demuxer
+avs_demuxer
+bethsoftvid_demuxer
+bfi_demuxer
+bink_demuxer
+c93_demuxer
+caf_demuxer
+cavsvideo_demuxer
+cdg_demuxer
+daud_demuxer
+dirac_demuxer
+dnxhd_demuxer
+dsicin_demuxer
+dts_demuxer
+dv_demuxer
+dxa_demuxer
+ea_demuxer
+ea_cdata_demuxer
+eac3_demuxer
+ffm_demuxer
+filmstrip_demuxer
+flac_demuxer
+flic_demuxer
+flv_demuxer
+fourxm_demuxer
+gsm_demuxer
+gxf_demuxer
+h261_demuxer
+h263_demuxer
+h264_demuxer
+idcin_demuxer
+iff_demuxer
+image2_demuxer
+image2pipe_demuxer
+ingenient_demuxer
+ipmovie_demuxer
+iss_demuxer
+iv8_demuxer
+lmlm4_demuxer
+m4v_demuxer
+matroska_demuxer
+mjpeg_demuxer
+mlp_demuxer
+mm_demuxer
+mmf_demuxer
+mov_demuxer
+mp3_demuxer
+mpc_demuxer
+mpc8_demuxer
+mpegps_demuxer
+mpegts_demuxer
+mpegtsraw_demuxer
+mpegvideo_demuxer
+msnwc_tcp_demuxer
+mtv_demuxer
+mvi_demuxer
+mxf_demuxer
+nc_demuxer
+nsv_demuxer
+nut_demuxer
+nuv_demuxer
+ogg_demuxer
+oma_demuxer
+pcm_alaw_demuxer
+pcm_mulaw_demuxer
+pcm_f64be_demuxer
+pcm_f64le_demuxer
+pcm_f32be_demuxer
+pcm_f32le_demuxer
+pcm_s32be_demuxer
+pcm_s32le_demuxer
+pcm_s24be_demuxer
+pcm_s24le_demuxer
+pcm_s16be_demuxer
+pcm_s16le_demuxer
+pcm_s8_demuxer
+pcm_u32be_demuxer
+pcm_u32le_demuxer
+pcm_u24be_demuxer
+pcm_u24le_demuxer
+pcm_u16be_demuxer
+pcm_u16le_demuxer
+pcm_u8_demuxer
+pva_demuxer
+qcp_demuxer
+r3d_demuxer
+rawvideo_demuxer
+rl2_demuxer
+rm_demuxer
+roq_demuxer
+rpl_demuxer
+rtsp_demuxer
+sdp_demuxer
+segafilm_demuxer
+shorten_demuxer
+siff_demuxer
+smacker_demuxer
+sol_demuxer
+sox_demuxer
+str_demuxer
+swf_demuxer
+thp_demuxer
+tiertexseq_demuxer
+tmv_demuxer
+truehd_demuxer
+tta_demuxer
+txd_demuxer
+vc1_demuxer
+vc1t_demuxer
+vmd_demuxer
+voc_demuxer
+vqf_demuxer
+w64_demuxer
+wav_demuxer
+wc3_demuxer
+wsaud_demuxer
+wsvqa_demuxer
+wv_demuxer
+xa_demuxer
+yop_demuxer
+yuv4mpegpipe_demuxer
+libnut_demuxer'
+dir_=' libpcap libxml2'
+dir_n=
+dir_y=' libz liblzo libiconv libssl libusb libusb-1.0 libnfnetlink libmnl libid3tag libav libexif libjpeg libogg libvorbis libflac libsqlite libcurl libevent'
+dirac_demuxer=no
+dirac_demuxer_deps=dirac_parser
+dirac_muxer=no
+dirac_parser=no
+dnxhd_decoder=no
+dnxhd_demuxer=no
+dnxhd_encoder=no
+dnxhd_encoder_select=aandct
+dnxhd_muxer=no
+dnxhd_parser=no
+doc=no
+doc_deps=texi2html
+dpx_decoder=no
+dsicin_demuxer=no
+dsicinaudio_decoder=no
+dsicinvideo_decoder=no
+dts_demuxer=yes
+dts_muxer=no
+dump_extradata_bsf=no
+dv1394_indev=no
+dv1394_indev_deps='dv1394 dv_demuxer'
+dv_demuxer=no
+dv_muxer=no
+dvbsub_decoder=no
+dvbsub_encoder=no
+dvbsub_parser=no
+dvdsub_decoder=no
+dvdsub_encoder=no
+dvdsub_parser=no
+dvvideo_decoder=no
+dvvideo_encoder=no
+dxa_decoder=no
+dxa_decoder_select=zlib
+dxa_demuxer=no
+dxva2=no
+ea_cdata_demuxer=no
+ea_demuxer=no
+eac3_decoder=no
+eac3_decoder_select=ac3_decoder
+eac3_demuxer=yes
+eac3_demuxer_select=ac3_parser
+eac3_muxer=no
+eacmv_decoder=no
+eamad_decoder=no
+eamad_decoder_select=aandct
+eatgq_decoder=no
+eatgq_decoder_select=aandct
+eatgv_decoder=no
+eatqi_decoder=no
+eatqi_decoder_select=aandct
+eightbps_decoder=no
+eightsvx_exp_decoder=no
+eightsvx_fib_decoder=no
+encoders_if_any='asv1_encoder
+asv2_encoder
+bmp_encoder
+dnxhd_encoder
+dvvideo_encoder
+ffv1_encoder
+ffvhuff_encoder
+flashsv_encoder
+flv_encoder
+gif_encoder
+h261_encoder
+h263_encoder
+h263p_encoder
+huffyuv_encoder
+jpegls_encoder
+ljpeg_encoder
+mjpeg_encoder
+mpeg1video_encoder
+mpeg2video_encoder
+mpeg4_encoder
+msmpeg4v1_encoder
+msmpeg4v2_encoder
+msmpeg4v3_encoder
+pam_encoder
+pbm_encoder
+pcx_encoder
+pgm_encoder
+pgmyuv_encoder
+png_encoder
+ppm_encoder
+qtrle_encoder
+rawvideo_encoder
+roq_encoder
+rv10_encoder
+rv20_encoder
+sgi_encoder
+snow_encoder
+svq1_encoder
+targa_encoder
+tiff_encoder
+v210_encoder
+wmv1_encoder
+wmv2_encoder
+zlib_encoder
+zmbv_encoder
+aac_encoder
+ac3_encoder
+alac_encoder
+flac_encoder
+mp2_encoder
+nellymoser_encoder
+sonic_encoder
+sonic_ls_encoder
+wmav1_encoder
+wmav2_encoder
+pcm_alaw_encoder
+pcm_f32be_encoder
+pcm_f32le_encoder
+pcm_f64be_encoder
+pcm_f64le_encoder
+pcm_mulaw_encoder
+pcm_s8_encoder
+pcm_s16be_encoder
+pcm_s16le_encoder
+pcm_s24be_encoder
+pcm_s24daud_encoder
+pcm_s24le_encoder
+pcm_s32be_encoder
+pcm_s32le_encoder
+pcm_u8_encoder
+pcm_u16be_encoder
+pcm_u16le_encoder
+pcm_u24be_encoder
+pcm_u24le_encoder
+pcm_u32be_encoder
+pcm_u32le_encoder
+pcm_zork_encoder
+roq_dpcm_encoder
+adpcm_adx_encoder
+adpcm_g726_encoder
+adpcm_ima_qt_encoder
+adpcm_ima_wav_encoder
+adpcm_ms_encoder
+adpcm_swf_encoder
+adpcm_yamaha_encoder
+dvbsub_encoder
+dvdsub_encoder
+xsub_encoder
+libdirac_encoder
+libfaac_encoder
+libgsm_encoder
+libgsm_ms_encoder
+libmp3lame_encoder
+libopencore_amrnb_encoder
+libschroedinger_encoder
+libtheora_encoder
+libvo_aacenc_encoder
+libvorbis_encoder
+libvpx_encoder
+libx264_encoder
+libxvid_encoder'
+escape124_decoder=no
+fast_64bit_if_any='alpha ia64 mips64 parisc64 ppc64 sparc64 x86_64'
+fast_clz_if_any='alpha armv5te avr32 mips ppc x86'
+fast_unaligned_if_any='armv6 ppc x86'
+fastdiv=yes
+ffm_demuxer=no
+ffm_muxer=no
+ffmpeg=no
+ffmpeg_deps='avcodec avformat swscale'
+ffplay=no
+ffplay_deps='avcodec avformat swscale sdl'
+ffplay_select=rdft
+ffprobe=no
+ffprobe_deps='avcodec avformat'
+ffserver=no
+ffserver_deps='avformat ffm_muxer rtp_protocol rtsp_demuxer'
+ffserver_extralibs='$ldl'
+ffv1_decoder=no
+ffv1_decoder_select=golomb
+ffv1_encoder=no
+ffvhuff_decoder=no
+ffvhuff_encoder=no
+file_protocol=yes
+filmstrip_demuxer=no
+filmstrip_muxer=no
+filters_if_any='aspect_filter
+crop_filter
+format_filter
+noformat_filter
+null_filter
+pixelaspect_filter
+scale_filter
+slicify_filter
+unsharp_filter
+vflip_filter
+nullsrc_filter
+nullsink_filter'
+flac_decoder=no
+flac_decoder_select=golomb
+flac_demuxer=yes
+flac_encoder=no
+flac_encoder_select='golomb lpc'
+flac_muxer=no
+flashsv_decoder=no
+flashsv_decoder_select=zlib
+flashsv_encoder=no
+flashsv_encoder_select=zlib
+flic_decoder=no
+flic_demuxer=no
+flv_decoder=no
+flv_decoder_select=h263_decoder
+flv_demuxer=yes
+flv_encoder=no
+flv_encoder_select=h263_encoder
+flv_muxer=no
+format_filter=no
+fourxm_decoder=no
+fourxm_demuxer=no
+framecrc_muxer=no
+fraps_decoder=no
+frwu_decoder=no
+gif_decoder=no
+gif_encoder=no
+gif_muxer=no
+gopher_protocol=no
+gopher_protocol_deps=network
+gpl=yes
+gsm_demuxer=no
+gxf_demuxer=no
+gxf_muxer=no
+h261_decoder=no
+h261_demuxer=no
+h261_encoder=no
+h261_encoder_select=aandct
+h261_muxer=no
+h261_parser=no
+h263_decoder=no
+h263_decoder_select=h263_parser
+h263_demuxer=no
+h263_encoder=no
+h263_encoder_select=aandct
+h263_muxer=no
+h263_parser=no
+h263_vaapi_hwaccel=no
+h263_vaapi_hwaccel_select='vaapi h263_decoder'
+h263i_decoder=no
+h263i_decoder_select=h263_decoder
+h263p_encoder=no
+h263p_encoder_select=h263_encoder
+h264_decoder=no
+h264_decoder_select='golomb h264dsp'
+h264_demuxer=yes
+h264_dxva2_hwaccel=no
+h264_dxva2_hwaccel_deps=dxva2api_h
+h264_dxva2_hwaccel_select='dxva2 h264_decoder'
+h264_mp4toannexb_bsf=no
+h264_muxer=no
+h264_parser=no
+h264_parser_select='golomb h264dsp'
+h264_vaapi_hwaccel=no
+h264_vaapi_hwaccel_select=vaapi
+h264_vdpau_decoder=no
+h264_vdpau_decoder_select='vdpau h264_decoder'
+host_cc_default=gcc
+host_cflags='-D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -O3 -g -Wall'
+host_libs=-lm
+host_os=linux
+http_protocol=no
+http_protocol_deps=network
+http_protocol_select=tcp_protocol
+huffyuv_decoder=no
+huffyuv_encoder=no
+hwaccels_if_any='h263_vaapi_hwaccel
+h264_dxva2_hwaccel
+h264_vaapi_hwaccel
+mpeg2_vaapi_hwaccel
+mpeg4_vaapi_hwaccel
+vc1_dxva2_hwaccel
+vc1_vaapi_hwaccel
+wmv3_dxva2_hwaccel
+wmv3_vaapi_hwaccel'
+idcin_decoder=no
+idcin_demuxer=no
+iff_byterun1_decoder=no
+iff_demuxer=no
+iff_ilbm_decoder=no
+image2_demuxer=no
+image2_muxer=no
+image2pipe_demuxer=no
+image2pipe_muxer=no
+imc_decoder=no
+imc_decoder_select='fft mdct'
+imx_dump_header_bsf=no
+incdir_default='${prefix}/include'
+indeo2_decoder=no
+indeo3_decoder=no
+indeo5_decoder=no
+indevs_if_any='alsa_indev
+audio_beos_indev
+bktr_indev
+dv1394_indev
+jack_indev
+oss_indev
+v4l2_indev
+v4l_indev
+vfwcap_indev
+x11_grab_device_indev
+libdc1394_indev'
+ingenient_demuxer=no
+inline_asm_deps='!tms470'
+interplay_dpcm_decoder=no
+interplay_video_decoder=no
+ipmovie_demuxer=no
+ipod_muxer=no
+ipod_muxer_select=mov_muxer
+iss_demuxer=no
+iv8_demuxer=no
+iwmmxt=yes
+iwmmxt_deps=arm
+jack_indev=no
+jack_indev_deps=jack_jack_h
+jack_indev_extralibs=-ljack
+jpegls_decoder=no
+jpegls_decoder_select=golomb
+jpegls_encoder=no
+jpegls_encoder_select=golomb
+kgv1_decoder=no
+kmvc_decoder=no
+l=--enable-demuxer=
+libdc1394_indev=no
+libdc1394_indev_deps=libdc1394
+libdir_default='${prefix}/lib'
+libdirac_decoder=no
+libdirac_decoder_deps='libdirac !libschroedinger'
+libdirac_encoder=no
+libdirac_encoder_deps=libdirac
+libfaac_encoder=no
+libfaac_encoder_deps=libfaac
+libfaad_decoder=no
+libfaad_decoder_deps=libfaad
+libfaadbin_extralibs='$ldl'
+libgsm_decoder=no
+libgsm_decoder_deps=libgsm
+libgsm_encoder=no
+libgsm_encoder_deps=libgsm
+libgsm_ms_decoder=no
+libgsm_ms_decoder_deps=libgsm
+libgsm_ms_encoder=no
+libgsm_ms_encoder_deps=libgsm
+libmp3lame_encoder=no
+libmp3lame_encoder_deps=libmp3lame
+libnut_demuxer=no
+libnut_demuxer_deps=libnut
+libnut_muxer=no
+libnut_muxer_deps=libnut
+libopencore_amrnb_decoder=no
+libopencore_amrnb_decoder_deps=libopencore_amrnb
+libopencore_amrnb_encoder=no
+libopencore_amrnb_encoder_deps=libopencore_amrnb
+libopencore_amrwb_decoder=no
+libopencore_amrwb_decoder_deps=libopencore_amrwb
+libopenjpeg_decoder=no
+libopenjpeg_decoder_deps=libopenjpeg
+libschroedinger_decoder=no
+libschroedinger_decoder_deps=libschroedinger
+libschroedinger_encoder=no
+libschroedinger_encoder_deps=libschroedinger
+libspeex_decoder=no
+libspeex_decoder_deps=libspeex
+libtheora_encoder=no
+libtheora_encoder_deps=libtheora
+libvo_aacenc_encoder=no
+libvo_aacenc_encoder_deps=libvo_aacenc
+libvorbis_encoder=no
+libvorbis_encoder_deps=libvorbis
+libvpx_decoder=no
+libvpx_decoder_deps=libvpx
+libvpx_encoder=no
+libvpx_encoder_deps=libvpx
+libx264_encoder=no
+libx264_encoder_deps=libx264
+libxvid_encoder=no
+libxvid_encoder_deps=libxvid
+list='aac_demuxer
+ac3_demuxer
+aea_demuxer
+aiff_demuxer
+amr_demuxer
+anm_demuxer
+apc_demuxer
+ape_demuxer
+asf_demuxer
+ass_demuxer
+au_demuxer
+avi_demuxer
+avisynth_demuxer
+avs_demuxer
+bethsoftvid_demuxer
+bfi_demuxer
+bink_demuxer
+c93_demuxer
+caf_demuxer
+cavsvideo_demuxer
+cdg_demuxer
+daud_demuxer
+dirac_demuxer
+dnxhd_demuxer
+dsicin_demuxer
+dts_demuxer
+dv_demuxer
+dxa_demuxer
+ea_demuxer
+ea_cdata_demuxer
+eac3_demuxer
+ffm_demuxer
+filmstrip_demuxer
+flac_demuxer
+flic_demuxer
+flv_demuxer
+fourxm_demuxer
+gsm_demuxer
+gxf_demuxer
+h261_demuxer
+h263_demuxer
+h264_demuxer
+idcin_demuxer
+iff_demuxer
+image2_demuxer
+image2pipe_demuxer
+ingenient_demuxer
+ipmovie_demuxer
+iss_demuxer
+iv8_demuxer
+lmlm4_demuxer
+m4v_demuxer
+matroska_demuxer
+mjpeg_demuxer
+mlp_demuxer
+mm_demuxer
+mmf_demuxer
+mov_demuxer
+mp3_demuxer
+mpc_demuxer
+mpc8_demuxer
+mpegps_demuxer
+mpegts_demuxer
+mpegtsraw_demuxer
+mpegvideo_demuxer
+msnwc_tcp_demuxer
+mtv_demuxer
+mvi_demuxer
+mxf_demuxer
+nc_demuxer
+nsv_demuxer
+nut_demuxer
+nuv_demuxer
+ogg_demuxer
+oma_demuxer
+pcm_alaw_demuxer
+pcm_mulaw_demuxer
+pcm_f64be_demuxer
+pcm_f64le_demuxer
+pcm_f32be_demuxer
+pcm_f32le_demuxer
+pcm_s32be_demuxer
+pcm_s32le_demuxer
+pcm_s24be_demuxer
+pcm_s24le_demuxer
+pcm_s16be_demuxer
+pcm_s16le_demuxer
+pcm_s8_demuxer
+pcm_u32be_demuxer
+pcm_u32le_demuxer
+pcm_u24be_demuxer
+pcm_u24le_demuxer
+pcm_u16be_demuxer
+pcm_u16le_demuxer
+pcm_u8_demuxer
+pva_demuxer
+qcp_demuxer
+r3d_demuxer
+rawvideo_demuxer
+rl2_demuxer
+rm_demuxer
+roq_demuxer
+rpl_demuxer
+rtsp_demuxer
+sdp_demuxer
+segafilm_demuxer
+shorten_demuxer
+siff_demuxer
+smacker_demuxer
+sol_demuxer
+sox_demuxer
+str_demuxer
+swf_demuxer
+thp_demuxer
+tiertexseq_demuxer
+tmv_demuxer
+truehd_demuxer
+tta_demuxer
+txd_demuxer
+vc1_demuxer
+vc1t_demuxer
+vmd_demuxer
+voc_demuxer
+vqf_demuxer
+w64_demuxer
+wav_demuxer
+wc3_demuxer
+wsaud_demuxer
+wsvqa_demuxer
+wv_demuxer
+xa_demuxer
+yop_demuxer
+yuv4mpegpipe_demuxer
+libnut_demuxer'
+ljpeg_encoder=no
+ljpeg_encoder_select=aandct
+lmlm4_demuxer=no
+ln_s='ln -sf'
+loco_decoder=no
+loco_decoder_select=golomb
+logfile=config.err
+m='eval disable \${$(toupper ${v%s})_LIST}'
+m4v_demuxer=yes
+m4v_muxer=no
+mace3_decoder=no
+mace6_decoder=no
+mandir_default='${prefix}/share/man'
+matroska_audio_muxer=no
+matroska_audio_muxer_select=matroska_muxer
+matroska_demuxer=yes
+matroska_demuxer_suggest='zlib bzlib'
+matroska_muxer=no
+mdct_select=fft
+mdec_decoder=no
+mimic_decoder=no
+mjpeg_decoder=no
+mjpeg_demuxer=no
+mjpeg_encoder=no
+mjpeg_encoder_select=aandct
+mjpeg_muxer=no
+mjpeg_parser=no
+mjpega_dump_header_bsf=no
+mjpegb_decoder=no
+mlp_decoder=no
+mlp_decoder_select=mlp_parser
+mlp_demuxer=no
+mlp_muxer=no
+mlp_parser=no
+mm_demuxer=no
+mmf_demuxer=no
+mmf_muxer=no
+mmi=yes
+mmi_deps=mips
+mmvideo_decoder=no
+mmx=yes
+mmx2=yes
+mmx2_deps=mmx
+mmx_deps=x86
+motionpixels_decoder=no
+mov2textsub_bsf=no
+mov_demuxer=yes
+mov_demuxer_suggest=zlib
+mov_muxer=no
+movie_filter_deps=avfilter_lavf
+mp1_decoder=no
+mp2_decoder=no
+mp2_encoder=no
+mp2_muxer=no
+mp3_decoder=no
+mp3_demuxer=yes
+mp3_demuxer_deps=mpegaudio_parser
+mp3_header_compress_bsf=no
+mp3_header_decompress_bsf=no
+mp3_muxer=no
+mp3adu_decoder=no
+mp3on4_decoder=no
+mp4_muxer=no
+mp4_muxer_select=mov_muxer
+mpc7_decoder=no
+mpc8_decoder=no
+mpc8_demuxer=no
+mpc_demuxer=no
+mpeg1_vdpau_decoder=no
+mpeg1_vdpau_decoder_select='vdpau mpeg1video_decoder'
+mpeg1system_muxer=no
+mpeg1vcd_muxer=no
+mpeg1video_decoder=no
+mpeg1video_encoder=no
+mpeg1video_encoder_select=aandct
+mpeg1video_muxer=no
+mpeg2_vaapi_hwaccel=no
+mpeg2_vaapi_hwaccel_select='vaapi mpeg2video_decoder'
+mpeg2dvd_muxer=no
+mpeg2svcd_muxer=no
+mpeg2video_decoder=no
+mpeg2video_encoder=no
+mpeg2video_encoder_select=aandct
+mpeg2video_muxer=no
+mpeg2vob_muxer=no
+mpeg4_decoder=no
+mpeg4_decoder_select='h263_decoder mpeg4video_parser'
+mpeg4_encoder=no
+mpeg4_encoder_select=h263_encoder
+mpeg4_vaapi_hwaccel=no
+mpeg4_vaapi_hwaccel_select='vaapi mpeg4_decoder'
+mpeg4_vdpau_decoder=no
+mpeg4_vdpau_decoder_select='vdpau mpeg4_decoder'
+mpeg4video_parser=no
+mpeg_vdpau_decoder=no
+mpeg_vdpau_decoder_select='vdpau mpegvideo_decoder'
+mpeg_xvmc_decoder=no
+mpeg_xvmc_decoder_deps=X11_extensions_XvMClib_h
+mpeg_xvmc_decoder_select=mpegvideo_decoder
+mpegaudio_hp=yes
+mpegaudio_parser=yes
+mpegps_demuxer=yes
+mpegts_demuxer=yes
+mpegts_muxer=no
+mpegtsraw_demuxer=no
+mpegtsraw_demuxer_select=mpegts_demuxer
+mpegvideo_decoder=no
+mpegvideo_demuxer=yes
+mpegvideo_parser=no
+mpjpeg_muxer=no
+msmpeg4v1_decoder=no
+msmpeg4v1_decoder_select=h263_decoder
+msmpeg4v1_encoder=no
+msmpeg4v1_encoder_select=h263_encoder
+msmpeg4v2_decoder=no
+msmpeg4v2_decoder_select=h263_decoder
+msmpeg4v2_encoder=no
+msmpeg4v2_encoder_select=h263_encoder
+msmpeg4v3_decoder=no
+msmpeg4v3_decoder_select=h263_decoder
+msmpeg4v3_encoder=no
+msmpeg4v3_encoder_select=h263_encoder
+msnwc_tcp_demuxer=no
+msrle_decoder=no
+msvideo1_decoder=no
+mszh_decoder=no
+mtv_demuxer=no
+muxers_if_any='ac3_muxer
+adts_muxer
+aiff_muxer
+amr_muxer
+asf_muxer
+ass_muxer
+asf_stream_muxer
+au_muxer
+avi_muxer
+avm2_muxer
+crc_muxer
+daud_muxer
+dirac_muxer
+dnxhd_muxer
+dts_muxer
+dv_muxer
+eac3_muxer
+ffm_muxer
+filmstrip_muxer
+flac_muxer
+flv_muxer
+framecrc_muxer
+gif_muxer
+gxf_muxer
+h261_muxer
+h263_muxer
+h264_muxer
+image2_muxer
+image2pipe_muxer
+ipod_muxer
+m4v_muxer
+matroska_muxer
+matroska_audio_muxer
+mjpeg_muxer
+mlp_muxer
+mmf_muxer
+mov_muxer
+mp2_muxer
+mp3_muxer
+mp4_muxer
+mpeg1system_muxer
+mpeg1vcd_muxer
+mpeg1video_muxer
+mpeg2dvd_muxer
+mpeg2svcd_muxer
+mpeg2video_muxer
+mpeg2vob_muxer
+mpegts_muxer
+mpjpeg_muxer
+mxf_muxer
+mxf_d10_muxer
+null_muxer
+nut_muxer
+ogg_muxer
+pcm_alaw_muxer
+pcm_mulaw_muxer
+pcm_f64be_muxer
+pcm_f64le_muxer
+pcm_f32be_muxer
+pcm_f32le_muxer
+pcm_s32be_muxer
+pcm_s32le_muxer
+pcm_s24be_muxer
+pcm_s24le_muxer
+pcm_s16be_muxer
+pcm_s16le_muxer
+pcm_s8_muxer
+pcm_u32be_muxer
+pcm_u32le_muxer
+pcm_u24be_muxer
+pcm_u24le_muxer
+pcm_u16be_muxer
+pcm_u16le_muxer
+pcm_u8_muxer
+psp_muxer
+rawvideo_muxer
+rm_muxer
+roq_muxer
+rtp_muxer
+rtsp_muxer
+sox_muxer
+spdif_muxer
+swf_muxer
+tg2_muxer
+tgp_muxer
+truehd_muxer
+vc1t_muxer
+voc_muxer
+wav_muxer
+webm_muxer
+yuv4mpegpipe_muxer
+libnut_muxer'
+mvi_demuxer=no
+mxf_d10_muxer=no
+mxf_d10_muxer_select=mxf_muxer
+mxf_demuxer=no
+mxf_muxer=no
+n=protocols
+name=wav_demuxer
+nc_demuxer=no
+need_memalign='altivec neon sse'
+nellymoser_decoder=no
+nellymoser_decoder_select=mdct
+nellymoser_encoder=no
+nellymoser_encoder_select=mdct
+neon=yes
+neon_deps=arm
+network=no
+nm_default=nm
+nm_opts=-g
+noformat_filter=no
+noise_bsf=no
+nsv_demuxer=no
+null_filter=no
+null_muxer=no
+nullsink_filter=no
+nullsrc_filter=no
+nut_demuxer=no
+nut_muxer=no
+nuv_decoder=no
+nuv_demuxer=no
+objformat=elf
+ogg_demuxer=yes
+ogg_demuxer_select=golomb
+ogg_muxer=no
+oma_demuxer=no
+op==
+opt=--enable-demuxer=wav
+optimizations=yes
+option=bsfs
+optname=as
+optval=wav
+oss_indev=no
+oss_indev_deps_any='soundcard_h sys_soundcard_h'
+oss_outdev=no
+oss_outdev_deps_any='soundcard_h sys_soundcard_h'
+outdevs_if_any='alsa_outdev
+audio_beos_outdev
+oss_outdev'
+pam_decoder=no
+pam_encoder=no
+parsers_if_any='aac_parser
+ac3_parser
+cavsvideo_parser
+dca_parser
+dirac_parser
+dnxhd_parser
+dvbsub_parser
+dvdsub_parser
+h261_parser
+h263_parser
+h264_parser
+mjpeg_parser
+mlp_parser
+mpeg4video_parser
+mpegaudio_parser
+mpegvideo_parser
+pnm_parser
+vc1_parser
+vp3_parser'
+pbm_decoder=no
+pbm_encoder=no
+pcm_alaw_decoder=no
+pcm_alaw_demuxer=no
+pcm_alaw_encoder=no
+pcm_alaw_muxer=no
+pcm_bluray_decoder=no
+pcm_dvd_decoder=no
+pcm_f32be_decoder=no
+pcm_f32be_demuxer=no
+pcm_f32be_encoder=no
+pcm_f32be_muxer=no
+pcm_f32le_decoder=no
+pcm_f32le_demuxer=no
+pcm_f32le_encoder=no
+pcm_f32le_muxer=no
+pcm_f64be_decoder=no
+pcm_f64be_demuxer=no
+pcm_f64be_encoder=no
+pcm_f64be_muxer=no
+pcm_f64le_decoder=no
+pcm_f64le_demuxer=no
+pcm_f64le_encoder=no
+pcm_f64le_muxer=no
+pcm_mulaw_decoder=no
+pcm_mulaw_demuxer=no
+pcm_mulaw_encoder=no
+pcm_mulaw_muxer=no
+pcm_s16be_decoder=no
+pcm_s16be_demuxer=no
+pcm_s16be_encoder=no
+pcm_s16be_muxer=no
+pcm_s16le_decoder=no
+pcm_s16le_demuxer=no
+pcm_s16le_encoder=no
+pcm_s16le_muxer=no
+pcm_s16le_planar_decoder=no
+pcm_s24be_decoder=no
+pcm_s24be_demuxer=no
+pcm_s24be_encoder=no
+pcm_s24be_muxer=no
+pcm_s24daud_decoder=no
+pcm_s24daud_encoder=no
+pcm_s24le_decoder=no
+pcm_s24le_demuxer=no
+pcm_s24le_encoder=no
+pcm_s24le_muxer=no
+pcm_s32be_decoder=no
+pcm_s32be_demuxer=no
+pcm_s32be_encoder=no
+pcm_s32be_muxer=no
+pcm_s32le_decoder=no
+pcm_s32le_demuxer=no
+pcm_s32le_encoder=no
+pcm_s32le_muxer=no
+pcm_s8_decoder=no
+pcm_s8_demuxer=no
+pcm_s8_encoder=no
+pcm_s8_muxer=no
+pcm_u16be_decoder=no
+pcm_u16be_demuxer=no
+pcm_u16be_encoder=no
+pcm_u16be_muxer=no
+pcm_u16le_decoder=no
+pcm_u16le_demuxer=no
+pcm_u16le_encoder=no
+pcm_u16le_muxer=no
+pcm_u24be_decoder=no
+pcm_u24be_demuxer=no
+pcm_u24be_encoder=no
+pcm_u24be_muxer=no
+pcm_u24le_decoder=no
+pcm_u24le_demuxer=no
+pcm_u24le_encoder=no
+pcm_u24le_muxer=no
+pcm_u32be_decoder=no
+pcm_u32be_demuxer=no
+pcm_u32be_encoder=no
+pcm_u32be_muxer=no
+pcm_u32le_decoder=no
+pcm_u32le_demuxer=no
+pcm_u32le_encoder=no
+pcm_u32le_muxer=no
+pcm_u8_decoder=no
+pcm_u8_demuxer=no
+pcm_u8_encoder=no
+pcm_u8_muxer=no
+pcm_zork_decoder=no
+pcm_zork_encoder=no
+pcx_decoder=no
+pcx_encoder=no
+pgm_decoder=no
+pgm_encoder=no
+pgmyuv_decoder=no
+pgmyuv_encoder=no
+pgssub_decoder=no
+pipe_protocol=no
+pixelaspect_filter=no
+png_decoder=no
+png_decoder_select=zlib
+png_encoder=no
+png_encoder_select=zlib
+pnm_parser=no
+postproc=no
+ppc4xx=yes
+ppc4xx_deps=ppc
+ppm_decoder=no
+ppm_encoder=no
+prefix=/opt/rt-n56u/trunk/stage
+prefix_default=/usr/local
+protocols=yes
+protocols_if_any='file_protocol
+gopher_protocol
+http_protocol
+pipe_protocol
+rtmp_protocol
+rtmpt_protocol
+rtmpe_protocol
+rtmpte_protocol
+rtmps_protocol
+rtp_protocol
+tcp_protocol
+udp_protocol
+concat_protocol'
+psp_muxer=no
+psp_muxer_select=mov_muxer
+pthreads=yes
+ptx_decoder=no
+pva_demuxer=no
+qcelp_decoder=no
+qcelp_decoder_select=lsp
+qcp_demuxer=no
+qdm2_decoder=no
+qdm2_decoder_select='mdct rdft'
+qdraw_decoder=no
+qpeg_decoder=no
+qtrle_decoder=no
+qtrle_encoder=no
+quotes='""'
+r=wav
+r210_decoder=no
+r3d_demuxer=no
+ra_144_decoder=no
+ra_288_decoder=no
+ranlib=ranlib
+rawvideo_decoder=no
+rawvideo_demuxer=no
+rawvideo_encoder=no
+rawvideo_muxer=no
+rdft_select=fft
+remove_extradata_bsf=no
+rl2_decoder=no
+rl2_demuxer=no
+rm_demuxer=no
+rm_muxer=no
+roq_decoder=no
+roq_demuxer=no
+roq_dpcm_decoder=no
+roq_dpcm_encoder=no
+roq_encoder=no
+roq_muxer=no
+rpl_demuxer=no
+rpza_decoder=no
+rtmp_protocol=no
+rtmp_protocol_deps=tcp_protocol
+rtmpe_protocol=no
+rtmps_protocol=no
+rtmpt_protocol=no
+rtmpte_protocol=no
+rtp_muxer=no
+rtp_protocol=no
+rtp_protocol_deps=udp_protocol
+rtsp_demuxer=no
+rtsp_demuxer_deps=sdp_demuxer
+rtsp_muxer=no
+rtsp_muxer_deps=sdp_demuxer
+rtsp_muxer_select=rtp_muxer
+rv10_decoder=no
+rv10_decoder_select=h263_decoder
+rv10_encoder=no
+rv10_encoder_select=h263_encoder
+rv20_decoder=no
+rv20_decoder_select=h263_decoder
+rv20_encoder=no
+rv20_encoder_select=h263_encoder
+rv30_decoder=no
+rv30_decoder_select='golomb h264dsp'
+rv40_decoder=no
+rv40_decoder_select='golomb h264dsp'
+scale_filter=no
+sdp_demuxer=no
+sdp_demuxer_deps='rtp_protocol mpegts_demuxer'
+sdp_demuxer_select='asf_demuxer rm_demuxer'
+segafilm_demuxer=no
+sgi_decoder=no
+sgi_encoder=no
+shared=no
+shlibdir_default='${prefix}/lib'
+shorten_decoder=no
+shorten_decoder_select=golomb
+shorten_demuxer=no
+siff_demuxer=no
+sipr_decoder=no
+sipr_decoder_select=lsp
+slicify_filter=no
+smackaud_decoder=no
+smacker_decoder=no
+smacker_demuxer=no
+small=yes
+smc_decoder=no
+snow_decoder=no
+snow_decoder_select=dwt
+snow_encoder=no
+snow_encoder_select='aandct dwt'
+sol_demuxer=no
+sol_dpcm_decoder=no
+sonic_decoder=no
+sonic_decoder_select=golomb
+sonic_encoder=no
+sonic_encoder_select=golomb
+sonic_ls_encoder=no
+sonic_ls_encoder_select=golomb
+source_path=/opt/rt-n56u/trunk/libs/libav/ffmpeg-0.6.x
+source_path_used=no
+sox_demuxer=no
+sox_muxer=no
+sp5x_decoder=no
+spdif_muxer=no
+spdif_muxer_select=aac_parser
+sse=yes
+sse_deps=mmx
+ssse3=yes
+ssse3_deps=sse
+static=yes
+str_demuxer=no
+strip_default=strip
+stripping=yes
+sunrast_decoder=no
+svq1_decoder=no
+svq1_encoder=no
+svq1_encoder_select=aandct
+svq3_decoder=no
+svq3_decoder_select='golomb h264dsp'
+svq3_decoder_suggest=zlib
+swf_demuxer=no
+swf_muxer=no
+swscale=no
+swscale_alpha=no
+symver_if_any='symver_asm_label symver_gnu_asm'
+targa_decoder=no
+targa_encoder=no
+target_os=linux
+target_os_default=linux
+target_path='$(CURDIR)'
+tcp_protocol=no
+tcp_protocol_deps=network
+text2movsub_bsf=no
+tg2_muxer=no
+tg2_muxer_select=mov_muxer
+tgp_muxer=no
+tgp_muxer_select=mov_muxer
+theora_decoder=no
+theora_decoder_select=vp3_decoder
+thing=demuxer
+thp_decoder=no
+thp_demuxer=no
+tiertexseq_demuxer=no
+tiertexseqvideo_decoder=no
+tiff_decoder=no
+tiff_decoder_suggest=zlib
+tiff_encoder=no
+tiff_encoder_suggest=zlib
+tmv_decoder=no
+tmv_demuxer=no
+truehd_decoder=no
+truehd_decoder_select=mlp_decoder
+truehd_demuxer=no
+truehd_muxer=no
+truemotion1_decoder=no
+truemotion2_decoder=no
+truespeech_decoder=no
+tscc_decoder=no
+tscc_decoder_select=zlib
+tta_decoder=no
+tta_demuxer=no
+twinvq_decoder=no
+twinvq_decoder_select='mdct lsp'
+txd_decoder=no
+txd_demuxer=no
+udp_protocol=no
+udp_protocol_deps=network
+ulti_decoder=no
+unsharp_filter=no
+v=protocols
+v210_decoder=no
+v210_encoder=no
+v210x_decoder=no
+v4l2_indev=no
+v4l2_indev_deps_any='linux_videodev2_h sys_videoio_h'
+v4l_indev=no
+v4l_indev_deps=linux_videodev_h
+vaapi_deps=va_va_h
+value=yes
+var=wav_demuxer
+vb_decoder=no
+vc1_decoder=no
+vc1_decoder_select=h263_decoder
+vc1_demuxer=no
+vc1_dxva2_hwaccel=no
+vc1_dxva2_hwaccel_deps='dxva2api_h DXVA_PictureParameters_wDecodedPictureIndex'
+vc1_dxva2_hwaccel_select='dxva2 vc1_decoder'
+vc1_parser=no
+vc1_vaapi_hwaccel=no
+vc1_vaapi_hwaccel_select='vaapi vc1_decoder'
+vc1_vdpau_decoder=no
+vc1_vdpau_decoder_select='vdpau vc1_decoder'
+vc1t_demuxer=no
+vc1t_muxer=no
+vcr1_decoder=no
+vdpau_deps='vdpau_vdpau_h vdpau_vdpau_x11_h'
+vflip_filter=no
+vfwcap_indev=no
+vfwcap_indev_deps='capCreateCaptureWindow vfwcap_defines'
+vfwcap_indev_extralibs=-lavicap32
+vis=yes
+vis_deps=sparc
+vmd_demuxer=no
+vmdaudio_decoder=no
+vmdvideo_decoder=no
+vmnc_decoder=no
+voc_demuxer=no
+voc_muxer=no
+vorbis_decoder=no
+vorbis_decoder_select=mdct
+vorbis_encoder_select=mdct
+vp3_decoder=no
+vp3_parser=no
+vp5_decoder=no
+vp6_decoder=no
+vp6a_decoder=no
+vp6a_decoder_select=vp6_decoder
+vp6f_decoder=no
+vp6f_decoder_select=vp6_decoder
+vqa_decoder=no
+vqf_demuxer=no
+w64_demuxer=no
+w64_demuxer_deps=wav_demuxer
+wav_demuxer=yes
+wav_muxer=no
+wavpack_decoder=no
+wc3_demuxer=no
+webm_muxer=no
+wmapro_decoder=no
+wmapro_decoder_select=mdct
+wmav1_decoder=no
+wmav1_decoder_select=mdct
+wmav1_encoder=no
+wmav1_encoder_select=mdct
+wmav2_decoder=no
+wmav2_decoder_select=mdct
+wmav2_encoder=no
+wmav2_encoder_select=mdct
+wmavoice_decoder=no
+wmavoice_decoder_select='lsp rdft dct'
+wmv1_decoder=no
+wmv1_decoder_select=h263_decoder
+wmv1_encoder=no
+wmv1_encoder_select=h263_encoder
+wmv2_decoder=no
+wmv2_decoder_select=h263_decoder
+wmv2_encoder=no
+wmv2_encoder_select=h263_encoder
+wmv3_decoder=no
+wmv3_decoder_select=vc1_decoder
+wmv3_dxva2_hwaccel=no
+wmv3_dxva2_hwaccel_select=vc1_dxva2_hwaccel
+wmv3_vaapi_hwaccel=no
+wmv3_vaapi_hwaccel_select=vc1_vaapi_hwaccel
+wmv3_vdpau_decoder=no
+wmv3_vdpau_decoder_select=vc1_vdpau_decoder
+wnv1_decoder=no
+ws_snd1_decoder=no
+wsaud_demuxer=no
+wsvqa_demuxer=no
+wv_demuxer=no
+x11_grab_device_indev=no
+x11_grab_device_indev_deps='x11grab XShmCreateImage'
+x11_grab_device_indev_extralibs='-lX11 -lXext -lXfixes'
+x86_64_suggest='cmov fast_cmov'
+xa_demuxer=no
+xan_dpcm_decoder=no
+xan_wc3_decoder=no
+xl_decoder=no
+xsub_decoder=no
+xsub_encoder=no
+yasmexe=yasm
+yop_decoder=no
+yop_demuxer=no
+yuv4mpegpipe_demuxer=no
+yuv4mpegpipe_muxer=no
+zlib=yes
+zlib_decoder=no
+zlib_decoder_select=zlib
+zlib_encoder=no
+zlib_encoder_select=zlib
+zmbv_decoder=no
+zmbv_decoder_select=zlib
+zmbv_encoder=no
+zmbv_encoder_select=zlib
+type mktemp
+mktemp is /bin/mktemp
+check_ld
+check_cc
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	int main(void){ return 0; }
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -L/opt/rt-n56u/trunk/stage/lib -Wl,--gc-sections -o /tmp/ffconf.bWSRXUqW /tmp/ffconf.aI41gTGg.o
+check_cflags -std=c99
+check_cc -std=c99
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	int x;
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+check_cc -D_FILE_OFFSET_BITS=64
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	#include <stdlib.h>
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -D_FILE_OFFSET_BITS=64 -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+check_cc -D_LARGEFILE_SOURCE
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	#include <stdlib.h>
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -D_LARGEFILE_SOURCE -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+check_host_cflags -std=c99
+check_host_cc -std=c99
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	int x;
+END /tmp/ffconf.rkiRcARm.c
+gcc -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -O3 -g -Wall -std=c99 -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+check_cpp_condition stdlib.h defined(__PIC__) || defined(__pic__) || defined(PIC)
+check_cpp
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	#include <stdlib.h>
+    2	#if !(defined(__PIC__) || defined(__pic__) || defined(PIC))
+    3	#error "unsatisfied condition: defined(__PIC__) || defined(__pic__) || defined(PIC)"
+    4	#endif
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -E -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+check_cflags -fomit-frame-pointer
+check_cc -fomit-frame-pointer
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	int x;
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+check_cc
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	int ff_extern;
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+check_cc
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	void foo(void) { __asm__ volatile ("" ::); }
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+check_cc
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	void foo(char * restrict p);
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+check_cc
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	struct { int x; } __attribute__((packed)) x;
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+check_cc
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	union { int x; } __attribute__((may_alias)) x;
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+check_cc
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	unsigned int endian = 'B' << 24 | 'I' << 16 | 'G' << 8 | 'E';
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+check_asm loongson "dmult.g $1, $2, $3"
+check_as
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	void foo(void){ __asm__ volatile("dmult.g $1, $2, $3"); }
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-as -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -fPIC -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-as: unrecognized option '-_ISOC99_SOURCE'
+check_asm mmi "lq $2, 0($2)"
+check_as
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	void foo(void){ __asm__ volatile("lq $2, 0($2)"); }
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-as -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -fPIC -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-as: unrecognized option '-_ISOC99_SOURCE'
+check_func dlopen
+check_ld
+check_cc
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	extern int dlopen();
+    2	int main(void){ dlopen(); }
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -L/opt/rt-n56u/trunk/stage/lib -Wl,--gc-sections -o /tmp/ffconf.bWSRXUqW /tmp/ffconf.aI41gTGg.o
+/tmp/ffconf.aI41gTGg.o: In function `main':
+ffconf.rkiRcARm.c:(.text.main+0x18): undefined reference to `dlopen'
+collect2: ld returned 1 exit status
+check_func dlopen -ldl
+check_ld -ldl
+check_cc
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	extern int dlopen();
+    2	int main(void){ dlopen(); }
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -L/opt/rt-n56u/trunk/stage/lib -Wl,--gc-sections -o /tmp/ffconf.bWSRXUqW /tmp/ffconf.aI41gTGg.o -ldl
+check_func nanosleep
+check_ld
+check_cc
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	extern int nanosleep();
+    2	int main(void){ nanosleep(); }
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -L/opt/rt-n56u/trunk/stage/lib -Wl,--gc-sections -o /tmp/ffconf.bWSRXUqW /tmp/ffconf.aI41gTGg.o
+check_func fork
+check_ld
+check_cc
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	extern int fork();
+    2	int main(void){ fork(); }
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -L/opt/rt-n56u/trunk/stage/lib -Wl,--gc-sections -o /tmp/ffconf.bWSRXUqW /tmp/ffconf.aI41gTGg.o
+check_func getaddrinfo
+check_ld
+check_cc
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	extern int getaddrinfo();
+    2	int main(void){ getaddrinfo(); }
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -L/opt/rt-n56u/trunk/stage/lib -Wl,--gc-sections -o /tmp/ffconf.bWSRXUqW /tmp/ffconf.aI41gTGg.o
+check_func gethrtime
+check_ld
+check_cc
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	extern int gethrtime();
+    2	int main(void){ gethrtime(); }
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -L/opt/rt-n56u/trunk/stage/lib -Wl,--gc-sections -o /tmp/ffconf.bWSRXUqW /tmp/ffconf.aI41gTGg.o
+/tmp/ffconf.aI41gTGg.o: In function `main':
+ffconf.rkiRcARm.c:(.text.main+0x18): undefined reference to `gethrtime'
+collect2: ld returned 1 exit status
+check_func getrusage
+check_ld
+check_cc
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	extern int getrusage();
+    2	int main(void){ getrusage(); }
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -L/opt/rt-n56u/trunk/stage/lib -Wl,--gc-sections -o /tmp/ffconf.bWSRXUqW /tmp/ffconf.aI41gTGg.o
+check_type sys/time.h sys/resource.h struct rusage ru_maxrss
+check_cc
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	
+    2	#include <sys/time.h>
+    3	#include <sys/resource.h>
+    4	const void *p = &((struct rusage *)0)->ru_maxrss;
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+check_func inet_aton
+check_ld
+check_cc
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	extern int inet_aton();
+    2	int main(void){ inet_aton(); }
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -L/opt/rt-n56u/trunk/stage/lib -Wl,--gc-sections -o /tmp/ffconf.bWSRXUqW /tmp/ffconf.aI41gTGg.o
+check_func isatty
+check_ld
+check_cc
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	extern int isatty();
+    2	int main(void){ isatty(); }
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -L/opt/rt-n56u/trunk/stage/lib -Wl,--gc-sections -o /tmp/ffconf.bWSRXUqW /tmp/ffconf.aI41gTGg.o
+check_func memalign
+check_ld
+check_cc
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	extern int memalign();
+    2	int main(void){ memalign(); }
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -L/opt/rt-n56u/trunk/stage/lib -Wl,--gc-sections -o /tmp/ffconf.bWSRXUqW /tmp/ffconf.aI41gTGg.o
+check_func mkstemp
+check_ld
+check_cc
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	extern int mkstemp();
+    2	int main(void){ mkstemp(); }
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -L/opt/rt-n56u/trunk/stage/lib -Wl,--gc-sections -o /tmp/ffconf.bWSRXUqW /tmp/ffconf.aI41gTGg.o
+check_func posix_memalign
+check_ld
+check_cc
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	extern int posix_memalign();
+    2	int main(void){ posix_memalign(); }
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -L/opt/rt-n56u/trunk/stage/lib -Wl,--gc-sections -o /tmp/ffconf.bWSRXUqW /tmp/ffconf.aI41gTGg.o
+check_func setrlimit
+check_ld
+check_cc
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	extern int setrlimit();
+    2	int main(void){ setrlimit(); }
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -L/opt/rt-n56u/trunk/stage/lib -Wl,--gc-sections -o /tmp/ffconf.bWSRXUqW /tmp/ffconf.aI41gTGg.o
+check_func strerror_r
+check_ld
+check_cc
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	extern int strerror_r();
+    2	int main(void){ strerror_r(); }
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -L/opt/rt-n56u/trunk/stage/lib -Wl,--gc-sections -o /tmp/ffconf.bWSRXUqW /tmp/ffconf.aI41gTGg.o
+check_func_headers io.h setmode
+check_ld
+check_cc
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	
+    2	#include <io.h>
+    3	int main(int argc, char **argv){
+    4	    return (long) setmode;
+    5	}
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+/tmp/ffconf.rkiRcARm.c:2:16: error: io.h: No such file or directory
+/tmp/ffconf.rkiRcARm.c: In function 'main':
+/tmp/ffconf.rkiRcARm.c:4: error: 'setmode' undeclared (first use in this function)
+/tmp/ffconf.rkiRcARm.c:4: error: (Each undeclared identifier is reported only once
+/tmp/ffconf.rkiRcARm.c:4: error: for each function it appears in.)
+check_func_headers lzo/lzo1x.h lzo1x_999_compress
+check_ld
+check_cc
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	
+    2	#include <lzo/lzo1x.h>
+    3	int main(int argc, char **argv){
+    4	    return (long) lzo1x_999_compress;
+    5	}
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -L/opt/rt-n56u/trunk/stage/lib -Wl,--gc-sections -o /tmp/ffconf.bWSRXUqW /tmp/ffconf.aI41gTGg.o
+/tmp/ffconf.aI41gTGg.o: In function `main':
+ffconf.rkiRcARm.c:(.text.main+0x10): undefined reference to `lzo1x_999_compress'
+collect2: ld returned 1 exit status
+check_lib2 windows.h psapi.h GetProcessMemoryInfo -lpsapi
+check_func_headers windows.h psapi.h GetProcessMemoryInfo -lpsapi
+check_ld -lpsapi
+check_cc
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	
+    2	#include <windows.h>
+    3	#include <psapi.h>
+    4	int main(int argc, char **argv){
+    5	    return (long) GetProcessMemoryInfo;
+    6	}
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+/tmp/ffconf.rkiRcARm.c:2:21: error: windows.h: No such file or directory
+/tmp/ffconf.rkiRcARm.c:3:19: error: psapi.h: No such file or directory
+/tmp/ffconf.rkiRcARm.c: In function 'main':
+/tmp/ffconf.rkiRcARm.c:5: error: 'GetProcessMemoryInfo' undeclared (first use in this function)
+/tmp/ffconf.rkiRcARm.c:5: error: (Each undeclared identifier is reported only once
+/tmp/ffconf.rkiRcARm.c:5: error: for each function it appears in.)
+check_func_headers windows.h GetProcessTimes
+check_ld
+check_cc
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	
+    2	#include <windows.h>
+    3	int main(int argc, char **argv){
+    4	    return (long) GetProcessTimes;
+    5	}
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+/tmp/ffconf.rkiRcARm.c:2:21: error: windows.h: No such file or directory
+/tmp/ffconf.rkiRcARm.c: In function 'main':
+/tmp/ffconf.rkiRcARm.c:4: error: 'GetProcessTimes' undeclared (first use in this function)
+/tmp/ffconf.rkiRcARm.c:4: error: (Each undeclared identifier is reported only once
+/tmp/ffconf.rkiRcARm.c:4: error: for each function it appears in.)
+check_func_headers windows.h VirtualAlloc
+check_ld
+check_cc
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	
+    2	#include <windows.h>
+    3	int main(int argc, char **argv){
+    4	    return (long) VirtualAlloc;
+    5	}
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+/tmp/ffconf.rkiRcARm.c:2:21: error: windows.h: No such file or directory
+/tmp/ffconf.rkiRcARm.c: In function 'main':
+/tmp/ffconf.rkiRcARm.c:4: error: 'VirtualAlloc' undeclared (first use in this function)
+/tmp/ffconf.rkiRcARm.c:4: error: (Each undeclared identifier is reported only once
+/tmp/ffconf.rkiRcARm.c:4: error: for each function it appears in.)
+check_header conio.h
+check_cpp
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	#include <conio.h>
+    2	int x;
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -E -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+/tmp/ffconf.rkiRcARm.c:1:19: error: conio.h: No such file or directory
+check_header dlfcn.h
+check_cpp
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	#include <dlfcn.h>
+    2	int x;
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -E -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+check_header dxva.h
+check_cpp
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	#include <dxva.h>
+    2	int x;
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -E -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+/tmp/ffconf.rkiRcARm.c:1:18: error: dxva.h: No such file or directory
+check_header dxva2api.h
+check_cpp
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	#include <dxva2api.h>
+    2	int x;
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -E -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+/tmp/ffconf.rkiRcARm.c:1:22: error: dxva2api.h: No such file or directory
+check_header malloc.h
+check_cpp
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	#include <malloc.h>
+    2	int x;
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -E -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+check_header poll.h
+check_cpp
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	#include <poll.h>
+    2	int x;
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -E -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+check_header sys/mman.h
+check_cpp
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	#include <sys/mman.h>
+    2	int x;
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -E -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+check_header sys/resource.h
+check_cpp
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	#include <sys/resource.h>
+    2	int x;
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -E -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+check_header sys/select.h
+check_cpp
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	#include <sys/select.h>
+    2	int x;
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -E -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+check_header termios.h
+check_cpp
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	#include <termios.h>
+    2	int x;
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -E -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+check_header vdpau/vdpau.h
+check_cpp
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	#include <vdpau/vdpau.h>
+    2	int x;
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -E -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+/tmp/ffconf.rkiRcARm.c:1:25: error: vdpau/vdpau.h: No such file or directory
+check_header vdpau/vdpau_x11.h
+check_cpp
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	#include <vdpau/vdpau_x11.h>
+    2	int x;
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -E -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+/tmp/ffconf.rkiRcARm.c:1:29: error: vdpau/vdpau_x11.h: No such file or directory
+check_header X11/extensions/XvMClib.h
+check_cpp
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	#include <X11/extensions/XvMClib.h>
+    2	int x;
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -E -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+/tmp/ffconf.rkiRcARm.c:1:36: error: X11/extensions/XvMClib.h: No such file or directory
+check_type dxva2api.h DXVA_PictureParameters wDecodedPictureIndex
+check_cc
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	
+    2	#include <dxva2api.h>
+    3	const void *p = &((DXVA_PictureParameters *)0)->wDecodedPictureIndex;
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+/tmp/ffconf.rkiRcARm.c:2:22: error: dxva2api.h: No such file or directory
+/tmp/ffconf.rkiRcARm.c:3: error: 'DXVA_PictureParameters' undeclared here (not in a function)
+/tmp/ffconf.rkiRcARm.c:3: error: expected expression before ')' token
+check_lib zlib.h zlibVersion -lz
+check_header zlib.h
+check_cpp
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	#include <zlib.h>
+    2	int x;
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -E -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+check_func zlibVersion
+check_ld
+check_cc
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	extern int zlibVersion();
+    2	int main(void){ zlibVersion(); }
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -L/opt/rt-n56u/trunk/stage/lib -Wl,--gc-sections -o /tmp/ffconf.bWSRXUqW /tmp/ffconf.aI41gTGg.o -lz
+check_lib2 bzlib.h BZ2_bzlibVersion -lbz2
+check_func_headers bzlib.h BZ2_bzlibVersion -lbz2
+check_ld -lbz2
+check_cc
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	
+    2	#include <bzlib.h>
+    3	int main(int argc, char **argv){
+    4	    return (long) BZ2_bzlibVersion;
+    5	}
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+/tmp/ffconf.rkiRcARm.c:2:19: error: bzlib.h: No such file or directory
+/tmp/ffconf.rkiRcARm.c: In function 'main':
+/tmp/ffconf.rkiRcARm.c:4: error: 'BZ2_bzlibVersion' undeclared (first use in this function)
+/tmp/ffconf.rkiRcARm.c:4: error: (Each undeclared identifier is reported only once
+/tmp/ffconf.rkiRcARm.c:4: error: for each function it appears in.)
+check_func pthread_create
+check_ld
+check_cc
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	extern int pthread_create();
+    2	int main(void){ pthread_create(); }
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -L/opt/rt-n56u/trunk/stage/lib -Wl,--gc-sections -o /tmp/ffconf.bWSRXUqW /tmp/ffconf.aI41gTGg.o -lz
+/tmp/ffconf.aI41gTGg.o: In function `main':
+ffconf.rkiRcARm.c:(.text.main+0x18): undefined reference to `pthread_create'
+collect2: ld returned 1 exit status
+check_func pthread_create -pthread
+check_ld -pthread
+check_cc -pthread
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	extern int pthread_create();
+    2	int main(void){ pthread_create(); }
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -pthread -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -L/opt/rt-n56u/trunk/stage/lib -Wl,--gc-sections -pthread -o /tmp/ffconf.bWSRXUqW /tmp/ffconf.aI41gTGg.o -lz
+check_lib math.h sin -lm
+check_header math.h
+check_cpp
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	#include <math.h>
+    2	int x;
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -pthread -E -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+check_func sin
+check_ld
+check_cc
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	extern int sin();
+    2	int main(void){ sin(); }
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -pthread -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+/tmp/ffconf.rkiRcARm.c:1: warning: conflicting types for built-in function 'sin'
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -L/opt/rt-n56u/trunk/stage/lib -Wl,--gc-sections -o /tmp/ffconf.bWSRXUqW /tmp/ffconf.aI41gTGg.o -lz -pthread -lm
+check_lib va/va.h vaInitialize -lva
+check_header va/va.h
+check_cpp
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	#include <va/va.h>
+    2	int x;
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -pthread -E -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+/tmp/ffconf.rkiRcARm.c:1:19: error: va/va.h: No such file or directory
+check_mathfunc exp2
+check_ld
+check_cc
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	#include <math.h>
+    2	float foo(float f) { return exp2(f); }
+    3	int main(void){ return 0; }
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -pthread -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -L/opt/rt-n56u/trunk/stage/lib -Wl,--gc-sections -o /tmp/ffconf.bWSRXUqW /tmp/ffconf.aI41gTGg.o -lz -pthread -lm
+check_mathfunc exp2f
+check_ld
+check_cc
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	#include <math.h>
+    2	float foo(float f) { return exp2f(f); }
+    3	int main(void){ return 0; }
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -pthread -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -L/opt/rt-n56u/trunk/stage/lib -Wl,--gc-sections -o /tmp/ffconf.bWSRXUqW /tmp/ffconf.aI41gTGg.o -lz -pthread -lm
+check_mathfunc llrint
+check_ld
+check_cc
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	#include <math.h>
+    2	float foo(float f) { return llrint(f); }
+    3	int main(void){ return 0; }
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -pthread -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -L/opt/rt-n56u/trunk/stage/lib -Wl,--gc-sections -o /tmp/ffconf.bWSRXUqW /tmp/ffconf.aI41gTGg.o -lz -pthread -lm
+check_mathfunc llrintf
+check_ld
+check_cc
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	#include <math.h>
+    2	float foo(float f) { return llrintf(f); }
+    3	int main(void){ return 0; }
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -pthread -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -L/opt/rt-n56u/trunk/stage/lib -Wl,--gc-sections -o /tmp/ffconf.bWSRXUqW /tmp/ffconf.aI41gTGg.o -lz -pthread -lm
+check_mathfunc log2
+check_ld
+check_cc
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	#include <math.h>
+    2	float foo(float f) { return log2(f); }
+    3	int main(void){ return 0; }
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -pthread -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -L/opt/rt-n56u/trunk/stage/lib -Wl,--gc-sections -o /tmp/ffconf.bWSRXUqW /tmp/ffconf.aI41gTGg.o -lz -pthread -lm
+check_mathfunc log2f
+check_ld
+check_cc
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	#include <math.h>
+    2	float foo(float f) { return log2f(f); }
+    3	int main(void){ return 0; }
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -pthread -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -L/opt/rt-n56u/trunk/stage/lib -Wl,--gc-sections -o /tmp/ffconf.bWSRXUqW /tmp/ffconf.aI41gTGg.o -lz -pthread -lm
+check_mathfunc lrint
+check_ld
+check_cc
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	#include <math.h>
+    2	float foo(float f) { return lrint(f); }
+    3	int main(void){ return 0; }
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -pthread -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -L/opt/rt-n56u/trunk/stage/lib -Wl,--gc-sections -o /tmp/ffconf.bWSRXUqW /tmp/ffconf.aI41gTGg.o -lz -pthread -lm
+check_mathfunc lrintf
+check_ld
+check_cc
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	#include <math.h>
+    2	float foo(float f) { return lrintf(f); }
+    3	int main(void){ return 0; }
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -pthread -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -L/opt/rt-n56u/trunk/stage/lib -Wl,--gc-sections -o /tmp/ffconf.bWSRXUqW /tmp/ffconf.aI41gTGg.o -lz -pthread -lm
+check_mathfunc round
+check_ld
+check_cc
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	#include <math.h>
+    2	float foo(float f) { return round(f); }
+    3	int main(void){ return 0; }
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -pthread -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -L/opt/rt-n56u/trunk/stage/lib -Wl,--gc-sections -o /tmp/ffconf.bWSRXUqW /tmp/ffconf.aI41gTGg.o -lz -pthread -lm
+check_mathfunc roundf
+check_ld
+check_cc
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	#include <math.h>
+    2	float foo(float f) { return roundf(f); }
+    3	int main(void){ return 0; }
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -pthread -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -L/opt/rt-n56u/trunk/stage/lib -Wl,--gc-sections -o /tmp/ffconf.bWSRXUqW /tmp/ffconf.aI41gTGg.o -lz -pthread -lm
+check_mathfunc truncf
+check_ld
+check_cc
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	#include <math.h>
+    2	float foo(float f) { return truncf(f); }
+    3	int main(void){ return 0; }
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -pthread -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -L/opt/rt-n56u/trunk/stage/lib -Wl,--gc-sections -o /tmp/ffconf.bWSRXUqW /tmp/ffconf.aI41gTGg.o -lz -pthread -lm
+check_header linux/videodev.h
+check_cpp
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	#include <linux/videodev.h>
+    2	int x;
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -pthread -E -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+/tmp/ffconf.rkiRcARm.c:1:28: error: linux/videodev.h: No such file or directory
+check_header linux/videodev2.h
+check_cpp
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	#include <linux/videodev2.h>
+    2	int x;
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -pthread -E -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+check_header sys/videoio.h
+check_cpp
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	#include <sys/videoio.h>
+    2	int x;
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -pthread -E -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+/tmp/ffconf.rkiRcARm.c:1:25: error: sys/videoio.h: No such file or directory
+check_func_headers windows.h vfw.h capCreateCaptureWindow -lavicap32
+check_ld -lavicap32
+check_cc
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	
+    2	#include <windows.h>
+    3	#include <vfw.h>
+    4	int main(int argc, char **argv){
+    5	    return (long) capCreateCaptureWindow;
+    6	}
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -pthread -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+/tmp/ffconf.rkiRcARm.c:2:21: error: windows.h: No such file or directory
+/tmp/ffconf.rkiRcARm.c:3:17: error: vfw.h: No such file or directory
+/tmp/ffconf.rkiRcARm.c: In function 'main':
+/tmp/ffconf.rkiRcARm.c:5: error: 'capCreateCaptureWindow' undeclared (first use in this function)
+/tmp/ffconf.rkiRcARm.c:5: error: (Each undeclared identifier is reported only once
+/tmp/ffconf.rkiRcARm.c:5: error: for each function it appears in.)
+check_cpp_condition vfw.h WM_CAP_DRIVER_CONNECT > WM_USER
+check_cpp
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	#include <vfw.h>
+    2	#if !(WM_CAP_DRIVER_CONNECT > WM_USER)
+    3	#error "unsatisfied condition: WM_CAP_DRIVER_CONNECT > WM_USER"
+    4	#endif
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -pthread -E -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+/tmp/ffconf.rkiRcARm.c:1:17: error: vfw.h: No such file or directory
+/tmp/ffconf.rkiRcARm.c:3:2: error: #error "unsatisfied condition: WM_CAP_DRIVER_CONNECT > WM_USER"
+check_header dev/bktr/ioctl_meteor.h
+check_cpp
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	#include <dev/bktr/ioctl_meteor.h>
+    2	int x;
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -pthread -E -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+/tmp/ffconf.rkiRcARm.c:1:35: error: dev/bktr/ioctl_meteor.h: No such file or directory
+check_header machine/ioctl_meteor.h
+check_cpp
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	#include <machine/ioctl_meteor.h>
+    2	int x;
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -pthread -E -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+/tmp/ffconf.rkiRcARm.c:1:34: error: machine/ioctl_meteor.h: No such file or directory
+check_header dev/video/meteor/ioctl_meteor.h
+check_cpp
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	#include <dev/video/meteor/ioctl_meteor.h>
+    2	int x;
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -pthread -E -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+/tmp/ffconf.rkiRcARm.c:1:43: error: dev/video/meteor/ioctl_meteor.h: No such file or directory
+check_header dev/ic/bt8xx.h
+check_cpp
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	#include <dev/ic/bt8xx.h>
+    2	int x;
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -pthread -E -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+/tmp/ffconf.rkiRcARm.c:1:26: error: dev/ic/bt8xx.h: No such file or directory
+check_header sys/soundcard.h
+check_cpp
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	#include <sys/soundcard.h>
+    2	int x;
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -pthread -E -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+check_header soundcard.h
+check_cpp
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	#include <soundcard.h>
+    2	int x;
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -pthread -E -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+/tmp/ffconf.rkiRcARm.c:1:23: error: soundcard.h: No such file or directory
+check_cflags -Wdeclaration-after-statement
+check_cc -Wdeclaration-after-statement
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	int x;
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -pthread -Wdeclaration-after-statement -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+check_cflags -Wall
+check_cc -Wall
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	int x;
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -pthread -Wdeclaration-after-statement -Wall -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+check_cflags -Wno-switch
+check_cc -Wno-switch
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	int x;
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -pthread -Wdeclaration-after-statement -Wall -Wno-switch -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+check_cflags -Wdisabled-optimization
+check_cc -Wdisabled-optimization
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	int x;
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -pthread -Wdeclaration-after-statement -Wall -Wno-switch -Wdisabled-optimization -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+check_cflags -Wpointer-arith
+check_cc -Wpointer-arith
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	int x;
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -pthread -Wdeclaration-after-statement -Wall -Wno-switch -Wdisabled-optimization -Wpointer-arith -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+check_cflags -Wredundant-decls
+check_cc -Wredundant-decls
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	int x;
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -pthread -Wdeclaration-after-statement -Wall -Wno-switch -Wdisabled-optimization -Wpointer-arith -Wredundant-decls -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+check_cflags -Wno-pointer-sign
+check_cc -Wno-pointer-sign
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	int x;
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -pthread -Wdeclaration-after-statement -Wall -Wno-switch -Wdisabled-optimization -Wpointer-arith -Wredundant-decls -Wno-pointer-sign -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+check_cflags -Wcast-qual
+check_cc -Wcast-qual
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	int x;
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -pthread -Wdeclaration-after-statement -Wall -Wno-switch -Wdisabled-optimization -Wpointer-arith -Wredundant-decls -Wno-pointer-sign -Wcast-qual -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+check_cflags -Wwrite-strings
+check_cc -Wwrite-strings
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	int x;
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -pthread -Wdeclaration-after-statement -Wall -Wno-switch -Wdisabled-optimization -Wpointer-arith -Wredundant-decls -Wno-pointer-sign -Wcast-qual -Wwrite-strings -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+check_cflags -Wtype-limits
+check_cc -Wtype-limits
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	int x;
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -pthread -Wdeclaration-after-statement -Wall -Wno-switch -Wdisabled-optimization -Wpointer-arith -Wredundant-decls -Wno-pointer-sign -Wcast-qual -Wwrite-strings -Wtype-limits -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+check_cflags -Wundef
+check_cc -Wundef
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	int x;
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -pthread -Wdeclaration-after-statement -Wall -Wno-switch -Wdisabled-optimization -Wpointer-arith -Wredundant-decls -Wno-pointer-sign -Wcast-qual -Wwrite-strings -Wtype-limits -Wundef -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+check_cflags -Wmissing-prototypes
+check_cc -Wmissing-prototypes
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	int x;
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -pthread -Wdeclaration-after-statement -Wall -Wno-switch -Wdisabled-optimization -Wpointer-arith -Wredundant-decls -Wno-pointer-sign -Wcast-qual -Wwrite-strings -Wtype-limits -Wundef -Wmissing-prototypes -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+check_ldflags -Wl,--warn-common
+test_ldflags -Wl,--warn-common
+check_ld -Wl,--warn-common
+check_cc -Wl,--warn-common
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	int main(void){ return 0; }
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -pthread -Wdeclaration-after-statement -Wall -Wno-switch -Wdisabled-optimization -Wpointer-arith -Wredundant-decls -Wno-pointer-sign -Wcast-qual -Wwrite-strings -Wtype-limits -Wundef -Wmissing-prototypes -Wl,--warn-common -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -L/opt/rt-n56u/trunk/stage/lib -Wl,--gc-sections -Wl,--warn-common -o /tmp/ffconf.bWSRXUqW /tmp/ffconf.aI41gTGg.o -lz -pthread -lm
+check_ldflags -Wl,--as-needed
+test_ldflags -Wl,--as-needed
+check_ld -Wl,--as-needed
+check_cc -Wl,--as-needed
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	int main(void){ return 0; }
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -pthread -Wdeclaration-after-statement -Wall -Wno-switch -Wdisabled-optimization -Wpointer-arith -Wredundant-decls -Wno-pointer-sign -Wcast-qual -Wwrite-strings -Wtype-limits -Wundef -Wmissing-prototypes -Wl,--as-needed -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -L/opt/rt-n56u/trunk/stage/lib -Wl,--gc-sections -Wl,--warn-common -Wl,--as-needed -o /tmp/ffconf.bWSRXUqW /tmp/ffconf.aI41gTGg.o -lz -pthread -lm
+check_ldflags -Wl,-rpath-link,\$(BUILD_ROOT)/libpostproc -Wl,-rpath-link,\$(BUILD_ROOT)/libswscale -Wl,-rpath-link,\$(BUILD_ROOT)/libavfilter -Wl,-rpath-link,\$(BUILD_ROOT)/libavdevice -Wl,-rpath-link,\$(BUILD_ROOT)/libavformat -Wl,-rpath-link,\$(BUILD_ROOT)/libavcodec -Wl,-rpath-link,\$(BUILD_ROOT)/libavutil
+test_ldflags -Wl,-rpath-link,\$(BUILD_ROOT)/libpostproc -Wl,-rpath-link,\$(BUILD_ROOT)/libswscale -Wl,-rpath-link,\$(BUILD_ROOT)/libavfilter -Wl,-rpath-link,\$(BUILD_ROOT)/libavdevice -Wl,-rpath-link,\$(BUILD_ROOT)/libavformat -Wl,-rpath-link,\$(BUILD_ROOT)/libavcodec -Wl,-rpath-link,\$(BUILD_ROOT)/libavutil
+check_ld -Wl,-rpath-link,\$(BUILD_ROOT)/libpostproc -Wl,-rpath-link,\$(BUILD_ROOT)/libswscale -Wl,-rpath-link,\$(BUILD_ROOT)/libavfilter -Wl,-rpath-link,\$(BUILD_ROOT)/libavdevice -Wl,-rpath-link,\$(BUILD_ROOT)/libavformat -Wl,-rpath-link,\$(BUILD_ROOT)/libavcodec -Wl,-rpath-link,\$(BUILD_ROOT)/libavutil
+check_cc -Wl,-rpath-link,\$(BUILD_ROOT)/libpostproc -Wl,-rpath-link,\$(BUILD_ROOT)/libswscale -Wl,-rpath-link,\$(BUILD_ROOT)/libavfilter -Wl,-rpath-link,\$(BUILD_ROOT)/libavdevice -Wl,-rpath-link,\$(BUILD_ROOT)/libavformat -Wl,-rpath-link,\$(BUILD_ROOT)/libavcodec -Wl,-rpath-link,\$(BUILD_ROOT)/libavutil
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	int main(void){ return 0; }
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -pthread -Wdeclaration-after-statement -Wall -Wno-switch -Wdisabled-optimization -Wpointer-arith -Wredundant-decls -Wno-pointer-sign -Wcast-qual -Wwrite-strings -Wtype-limits -Wundef -Wmissing-prototypes -Wl,-rpath-link,\$(BUILD_ROOT)/libpostproc -Wl,-rpath-link,\$(BUILD_ROOT)/libswscale -Wl,-rpath-link,\$(BUILD_ROOT)/libavfilter -Wl,-rpath-link,\$(BUILD_ROOT)/libavdevice -Wl,-rpath-link,\$(BUILD_ROOT)/libavformat -Wl,-rpath-link,\$(BUILD_ROOT)/libavcodec -Wl,-rpath-link,\$(BUILD_ROOT)/libavutil -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -L/opt/rt-n56u/trunk/stage/lib -Wl,--gc-sections -Wl,--warn-common -Wl,--as-needed -Wl,-rpath-link,\$(BUILD_ROOT)/libpostproc -Wl,-rpath-link,\$(BUILD_ROOT)/libswscale -Wl,-rpath-link,\$(BUILD_ROOT)/libavfilter -Wl,-rpath-link,\$(BUILD_ROOT)/libavdevice -Wl,-rpath-link,\$(BUILD_ROOT)/libavformat -Wl,-rpath-link,\$(BUILD_ROOT)/libavcodec -Wl,-rpath-link,\$(BUILD_ROOT)/libavutil -o /tmp/ffconf.bWSRXUqW /tmp/ffconf.aI41gTGg.o -lz -pthread -lm
+check_ldflags -Wl,-Bsymbolic
+test_ldflags -Wl,-Bsymbolic
+check_ld -Wl,-Bsymbolic
+check_cc -Wl,-Bsymbolic
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	int main(void){ return 0; }
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -pthread -Wdeclaration-after-statement -Wall -Wno-switch -Wdisabled-optimization -Wpointer-arith -Wredundant-decls -Wno-pointer-sign -Wcast-qual -Wwrite-strings -Wtype-limits -Wundef -Wmissing-prototypes -Wl,-Bsymbolic -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -L/opt/rt-n56u/trunk/stage/lib -Wl,--gc-sections -Wl,--warn-common -Wl,--as-needed -Wl,-rpath-link,$(BUILD_ROOT)/libpostproc -Wl,-rpath-link,$(BUILD_ROOT)/libswscale -Wl,-rpath-link,$(BUILD_ROOT)/libavfilter -Wl,-rpath-link,$(BUILD_ROOT)/libavdevice -Wl,-rpath-link,$(BUILD_ROOT)/libavformat -Wl,-rpath-link,$(BUILD_ROOT)/libavcodec -Wl,-rpath-link,$(BUILD_ROOT)/libavutil -Wl,-Bsymbolic -o /tmp/ffconf.bWSRXUqW /tmp/ffconf.aI41gTGg.o -lz -pthread -lm
+test_ldflags -Wl,--version-script,/tmp/ffconf.7xlhm0mo.ver
+check_ld -Wl,--version-script,/tmp/ffconf.7xlhm0mo.ver
+check_cc -Wl,--version-script,/tmp/ffconf.7xlhm0mo.ver
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	int main(void){ return 0; }
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -pthread -Wdeclaration-after-statement -Wall -Wno-switch -Wdisabled-optimization -Wpointer-arith -Wredundant-decls -Wno-pointer-sign -Wcast-qual -Wwrite-strings -Wtype-limits -Wundef -Wmissing-prototypes -Wl,--version-script,/tmp/ffconf.7xlhm0mo.ver -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -L/opt/rt-n56u/trunk/stage/lib -Wl,--gc-sections -Wl,--warn-common -Wl,--as-needed -Wl,-rpath-link,$(BUILD_ROOT)/libpostproc -Wl,-rpath-link,$(BUILD_ROOT)/libswscale -Wl,-rpath-link,$(BUILD_ROOT)/libavfilter -Wl,-rpath-link,$(BUILD_ROOT)/libavdevice -Wl,-rpath-link,$(BUILD_ROOT)/libavformat -Wl,-rpath-link,$(BUILD_ROOT)/libavcodec -Wl,-rpath-link,$(BUILD_ROOT)/libavutil -Wl,-Bsymbolic -Wl,--version-script,/tmp/ffconf.7xlhm0mo.ver -o /tmp/ffconf.bWSRXUqW /tmp/ffconf.aI41gTGg.o -lz -pthread -lm
+check_cc
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	void ff_foo(void) __asm__ ("av_foo@VERSION");
+    2	void ff_foo(void) { __asm__(""); }
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -pthread -Wdeclaration-after-statement -Wall -Wno-switch -Wdisabled-optimization -Wpointer-arith -Wredundant-decls -Wno-pointer-sign -Wcast-qual -Wwrite-strings -Wtype-limits -Wundef -Wmissing-prototypes -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+{standard input}: Assembler messages:
+{standard input}:8: Error: : no such section
+{standard input}:8: Error: junk at end of line, first unrecognized character is `@'
+{standard input}:10: Error: junk at end of line, first unrecognized character is `@'
+{standard input}:11: Error: unrecognized symbol type "VERSION"
+{standard input}:11: Error: junk at end of line, first unrecognized character is `,'
+{standard input}:12: Error: unrecognized opcode `av_foo@VERSION:'
+{standard input}:17: Error: junk at end of line, first unrecognized character is `@'
+{standard input}:18: Error: expected comma after name `av_foo' in .size directive
+check_cc
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	__asm__(".symver ff_foo,av_foo@VERSION");
+    2	void ff_foo(void) {}
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -pthread -Wdeclaration-after-statement -Wall -Wno-switch -Wdisabled-optimization -Wpointer-arith -Wredundant-decls -Wno-pointer-sign -Wcast-qual -Wwrite-strings -Wtype-limits -Wundef -Wmissing-prototypes -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+/tmp/ffconf.rkiRcARm.c:2: warning: no previous prototype for 'ff_foo'
+check_cflags -fno-math-errno
+check_cc -fno-math-errno
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	int x;
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -pthread -Wdeclaration-after-statement -Wall -Wno-switch -Wdisabled-optimization -Wpointer-arith -Wredundant-decls -Wno-pointer-sign -Wcast-qual -Wwrite-strings -Wtype-limits -Wundef -Wmissing-prototypes -Os -fno-math-errno -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+check_cflags -fno-signed-zeros
+check_cc -fno-signed-zeros
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	int x;
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -pthread -Wdeclaration-after-statement -Wall -Wno-switch -Wdisabled-optimization -Wpointer-arith -Wredundant-decls -Wno-pointer-sign -Wcast-qual -Wwrite-strings -Wtype-limits -Wundef -Wmissing-prototypes -Os -fno-math-errno -fno-signed-zeros -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+check_cflags -fno-tree-vectorize
+check_cc -fno-tree-vectorize
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	int x;
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -pthread -Wdeclaration-after-statement -Wall -Wno-switch -Wdisabled-optimization -Wpointer-arith -Wredundant-decls -Wno-pointer-sign -Wcast-qual -Wwrite-strings -Wtype-limits -Wundef -Wmissing-prototypes -Os -fno-math-errno -fno-signed-zeros -fno-tree-vectorize -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+check_cflags -Werror=implicit
+check_cc -Werror=implicit
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	int x;
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -pthread -Wdeclaration-after-statement -Wall -Wno-switch -Wdisabled-optimization -Wpointer-arith -Wredundant-decls -Wno-pointer-sign -Wcast-qual -Wwrite-strings -Wtype-limits -Wundef -Wmissing-prototypes -Os -fno-math-errno -fno-signed-zeros -fno-tree-vectorize -Werror=implicit -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+check_cflags -Werror=missing-prototypes
+check_cc -Werror=missing-prototypes
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	int x;
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -pthread -Wdeclaration-after-statement -Wall -Wno-switch -Wdisabled-optimization -Wpointer-arith -Wredundant-decls -Wno-pointer-sign -Wcast-qual -Wwrite-strings -Wtype-limits -Wundef -Wmissing-prototypes -Os -fno-math-errno -fno-signed-zeros -fno-tree-vectorize -Werror=implicit -Werror=missing-prototypes -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+check_cflags -Werror=return-type
+check_cc -Werror=return-type
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	int x;
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-gcc -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -Os -fomit-frame-pointer -pipe -DEMBED -I/opt/rt-n56u/trunk/stage/include -Dlinux -D__linux__ -Dunix -Wall -Wno-trigraphs -Wno-strict-aliasing -Wno-format-security -Wno-pointer-sign -ffunction-sections -fdata-sections -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -D_LARGEFILE64_SOURCE -D_LFS64_LARGEFILE -std=c99 -fomit-frame-pointer -fPIC -pthread -Wdeclaration-after-statement -Wall -Wno-switch -Wdisabled-optimization -Wpointer-arith -Wredundant-decls -Wno-pointer-sign -Wcast-qual -Wwrite-strings -Wtype-limits -Wundef -Wmissing-prototypes -Os -fno-math-errno -fno-signed-zeros -fno-tree-vectorize -Werror=implicit -Werror=missing-prototypes -Werror=return-type -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+check_asm asmalign_pot ".align 3"
+check_as
+BEGIN /tmp/ffconf.rkiRcARm.c
+    1	void foo(void){ __asm__ volatile(".align 3"); }
+END /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-as -mips32r2 -march=mips32r2 -D_ISOC99_SOURCE -D_POSIX_C_SOURCE=200112 -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -DPIC -fPIC -c -o /tmp/ffconf.aI41gTGg.o /tmp/ffconf.rkiRcARm.c
+/opt/rt-n56u/toolchain-mipsel/toolchain-3.4.x/bin/mipsel-linux-uclibc-as: unrecognized option '-_ISOC99_SOURCE'

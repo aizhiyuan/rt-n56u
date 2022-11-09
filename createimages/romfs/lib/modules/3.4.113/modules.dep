@@ -1,0 +1,84 @@
+kernel/arch/mips/rt2880/rt_timer_wdg.ko:
+kernel/fs/mbcache.ko:
+kernel/fs/ext4/ext4.ko: kernel/fs/mbcache.ko kernel/fs/jbd2/jbd2.ko
+kernel/fs/jbd2/jbd2.ko:
+kernel/fs/fat/fat.ko:
+kernel/fs/fat/vfat.ko: kernel/fs/fat/fat.ko
+kernel/fs/exfat/exfat.ko:
+kernel/fs/ufsd/ufsd.ko:
+kernel/fs/exportfs/exportfs.ko:
+kernel/fs/nfsd/nfsd.ko: kernel/fs/exportfs/exportfs.ko kernel/fs/lockd/lockd.ko kernel/net/sunrpc/sunrpc.ko
+kernel/fs/lockd/lockd.ko: kernel/net/sunrpc/sunrpc.ko
+kernel/fs/fuse/fuse.ko:
+kernel/drivers/scsi/sr_mod.ko: kernel/drivers/cdrom/cdrom.ko
+kernel/drivers/net/wireless/ralink/rt2860v2_ap/rt2860v2_ap.ko:
+kernel/drivers/net/usb/cdc_ether.ko: kernel/drivers/net/usb/usbnet.ko
+kernel/drivers/net/usb/rndis_host.ko: kernel/drivers/net/usb/cdc_ether.ko kernel/drivers/net/usb/usbnet.ko
+kernel/drivers/net/usb/usbnet.ko:
+kernel/drivers/net/usb/sierra_net.ko: kernel/drivers/net/usb/usbnet.ko
+kernel/drivers/net/usb/cdc_ncm.ko: kernel/drivers/net/usb/usbnet.ko
+kernel/drivers/net/usb/huawei_cdc_ncm.ko: kernel/drivers/usb/class/cdc-wdm.ko kernel/drivers/net/usb/cdc_ncm.ko kernel/drivers/net/usb/usbnet.ko
+kernel/drivers/net/usb/qmi_wwan.ko: kernel/drivers/usb/class/cdc-wdm.ko kernel/drivers/net/usb/usbnet.ko
+kernel/drivers/net/usb/cdc_mbim.ko: kernel/drivers/usb/class/cdc-wdm.ko kernel/drivers/net/usb/cdc_ncm.ko kernel/drivers/net/usb/usbnet.ko
+kernel/drivers/cdrom/cdrom.ko:
+kernel/drivers/usb/storage/usb-storage.ko:
+kernel/drivers/usb/host/ehci-hcd.ko:
+kernel/drivers/usb/host/ohci-hcd.ko:
+kernel/drivers/usb/class/cdc-acm.ko:
+kernel/drivers/usb/class/usblp.ko:
+kernel/drivers/usb/class/cdc-wdm.ko:
+kernel/drivers/usb/serial/usbserial.ko:
+kernel/drivers/usb/serial/option.ko: kernel/drivers/usb/serial/usb_wwan.ko kernel/drivers/usb/serial/usbserial.ko
+kernel/drivers/usb/serial/qcserial.ko: kernel/drivers/usb/serial/usb_wwan.ko kernel/drivers/usb/serial/usbserial.ko
+kernel/drivers/usb/serial/sierra.ko: kernel/drivers/usb/serial/usbserial.ko
+kernel/drivers/usb/serial/usb_wwan.ko: kernel/drivers/usb/serial/usbserial.ko
+kernel/net/netfilter/nfnetlink.ko:
+kernel/net/netfilter/nf_conntrack_proto_gre.ko:
+kernel/net/netfilter/nf_conntrack_ftp.ko:
+kernel/net/netfilter/nf_conntrack_h323.ko:
+kernel/net/netfilter/nf_conntrack_pptp.ko: kernel/net/netfilter/nf_conntrack_proto_gre.ko
+kernel/net/netfilter/nf_conntrack_rtsp.ko:
+kernel/net/netfilter/nf_conntrack_sip.ko:
+kernel/net/netfilter/xt_CT.ko:
+kernel/net/netfilter/xt_DSCP.ko:
+kernel/net/netfilter/xt_HL.ko:
+kernel/net/netfilter/xt_NOTRACK.ko:
+kernel/net/netfilter/xt_connbytes.ko:
+kernel/net/netfilter/xt_dscp.ko:
+kernel/net/netfilter/xt_hl.ko:
+kernel/net/netfilter/xt_length.ko:
+kernel/net/netfilter/xt_physdev.ko:
+kernel/net/netfilter/xt_webstr.ko:
+kernel/net/bridge/netfilter/ebtables.ko:
+kernel/net/bridge/netfilter/ebtable_filter.ko: kernel/net/bridge/netfilter/ebtables.ko
+kernel/net/bridge/netfilter/ebt_ip.ko:
+kernel/net/bridge/netfilter/ebt_pkttype.ko:
+kernel/net/ipv4/netfilter/nf_nat_ftp.ko: kernel/net/netfilter/nf_conntrack_ftp.ko
+kernel/net/ipv4/netfilter/nf_nat_h323.ko: kernel/net/netfilter/nf_conntrack_h323.ko
+kernel/net/ipv4/netfilter/nf_nat_pptp.ko: kernel/net/ipv4/netfilter/nf_nat_proto_gre.ko kernel/net/netfilter/nf_conntrack_pptp.ko kernel/net/netfilter/nf_conntrack_proto_gre.ko
+kernel/net/ipv4/netfilter/nf_nat_rtsp.ko: kernel/net/netfilter/nf_conntrack_rtsp.ko
+kernel/net/ipv4/netfilter/nf_nat_sip.ko: kernel/net/netfilter/nf_conntrack_sip.ko
+kernel/net/ipv4/netfilter/nf_nat_proto_gre.ko:
+kernel/net/ipv4/netfilter/iptable_mangle.ko:
+kernel/net/ipv4/netfilter/iptable_raw.ko:
+kernel/net/ipv4/netfilter/ipt_REDIRECT.ko:
+kernel/net/ipv6/netfilter/ip6table_mangle.ko:
+kernel/net/nat/hw_nat/hw_nat.ko:
+kernel/net/sunrpc/sunrpc.ko:
+kernel/net/netfilter/ipset/ip_set_hash_netportnet.ko: kernel/net/netfilter/ipset/ip_set.ko kernel/net/netfilter/nfnetlink.ko
+kernel/net/netfilter/ipset/ip_set_list_set.ko: kernel/net/netfilter/ipset/ip_set.ko kernel/net/netfilter/nfnetlink.ko
+kernel/net/netfilter/ipset/ip_set_hash_netport.ko: kernel/net/netfilter/ipset/ip_set.ko kernel/net/netfilter/nfnetlink.ko
+kernel/net/netfilter/ipset/ip_set_bitmap_ip.ko: kernel/net/netfilter/ipset/ip_set.ko kernel/net/netfilter/nfnetlink.ko
+kernel/net/netfilter/ipset/ip_set_hash_netiface.ko: kernel/net/netfilter/ipset/ip_set.ko kernel/net/netfilter/nfnetlink.ko
+kernel/net/netfilter/ipset/ip_set_bitmap_ipmac.ko: kernel/net/netfilter/ipset/ip_set.ko kernel/net/netfilter/nfnetlink.ko
+kernel/net/netfilter/ipset/ip_set_hash_ipmark.ko: kernel/net/netfilter/ipset/ip_set.ko kernel/net/netfilter/nfnetlink.ko
+kernel/net/netfilter/ipset/ip_set_hash_netnet.ko: kernel/net/netfilter/ipset/ip_set.ko kernel/net/netfilter/nfnetlink.ko
+kernel/net/netfilter/xt_set.ko: kernel/net/netfilter/ipset/ip_set.ko kernel/net/netfilter/nfnetlink.ko
+kernel/net/netfilter/ipset/ip_set_bitmap_port.ko: kernel/net/netfilter/ipset/ip_set.ko kernel/net/netfilter/nfnetlink.ko
+kernel/net/netfilter/ipset/ip_set_hash_ipportnet.ko: kernel/net/netfilter/ipset/ip_set.ko kernel/net/netfilter/nfnetlink.ko
+kernel/net/netfilter/ipset/ip_set_hash_ipport.ko: kernel/net/netfilter/ipset/ip_set.ko kernel/net/netfilter/nfnetlink.ko
+kernel/net/netfilter/ipset/ip_set_hash_net.ko: kernel/net/netfilter/ipset/ip_set.ko kernel/net/netfilter/nfnetlink.ko
+kernel/net/netfilter/ipset/ip_set_hash_mac.ko: kernel/net/netfilter/ipset/ip_set.ko kernel/net/netfilter/nfnetlink.ko
+kernel/net/netfilter/ipset/ip_set_hash_ipportip.ko: kernel/net/netfilter/ipset/ip_set.ko kernel/net/netfilter/nfnetlink.ko
+kernel/net/netfilter/ipset/ip_set_hash_ip.ko: kernel/net/netfilter/ipset/ip_set.ko kernel/net/netfilter/nfnetlink.ko
+kernel/net/netfilter/ipset/ip_set.ko: kernel/net/netfilter/nfnetlink.ko

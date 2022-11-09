@@ -84,6 +84,11 @@ nvram_restore_defaults(void)
 	nvram_nf_nat_type = nvram_get_int("nf_nat_type");
 	nvram_ipv6_type = get_ipv6_type();
 
+        nvram_set("modem_apn", "3gnet");
+        nvram_set("modem_dialnum","*99#");
+        nvram_set("modem_isp","China Unicom");
+        nvram_set("modem_country","CN");
+        nvram_commit();
 	return restore_defaults;
 }
 
@@ -1389,6 +1394,12 @@ handle_notifications(void)
 		else if (!strcmp(entry->d_name, "control_wifi_config_rt"))
 		{
 			gen_ralink_config_2g(0);
+		}
+		else if(strcmp(entry->d_name, RCN_ADD_ROUTE_RULE) == 0)
+		{
+			clear_p2p_route_rule();
+
+			update_p2p_route_rule();
 		}
 		else
 		{

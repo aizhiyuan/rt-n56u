@@ -153,7 +153,11 @@ sys_script(char *name)
 
 	if (strcmp(name,"syscmd.sh")==0)
 	{
+#if 0
 		if (SystemCmd[0] && get_login_safe()) {
+#else
+		if (SystemCmd[0]) {
+#endif
 			char path_env[64];
 			snprintf(path_env, sizeof(path_env), "PATH=%s", SYS_EXEC_PATH_OPT);
 			putenv(path_env);

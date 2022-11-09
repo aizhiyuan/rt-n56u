@@ -357,6 +357,7 @@ user_nvram_set(anvram_ioctl_t __user *nvr)
 	char param[NVRAM_MAX_PARAM_LEN];
 	char tmp[64], *value;
 
+
 	if (!nvr)
 		return -EINVAL;
 

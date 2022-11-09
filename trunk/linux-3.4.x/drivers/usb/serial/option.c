@@ -712,6 +712,18 @@ static const struct option_blacklist_info yuga_clm920_nc5_blacklist = {
 };
 
 static const struct usb_device_id option_ids[] = {
+#if 1 //Added by Quectel
+	{ USB_DEVICE(0x05C6, 0x9090) }, /* Quectel UC15 */
+	{ USB_DEVICE(0x05C6, 0x9003) }, /* Quectel UC20 */
+	{ USB_DEVICE(0x2C7C, 0x0125) }, /* Quectel EC25 */
+	{ USB_DEVICE(0x2C7C, 0x0121) }, /* Quectel EC21 */
+	{ USB_DEVICE(0x05C6, 0x9215) }, /* Quectel EC20 */
+	{ USB_DEVICE(0x2C7C, 0x0191) }, /* Quectel EG91 */
+	{ USB_DEVICE(0x2C7C, 0x0195) }, /* Quectel EG95 */
+	{ USB_DEVICE(0x2C7C, 0x0306) }, /* Quectel EG06/EP06/EM06 */
+	{ USB_DEVICE(0x2C7C, 0x0296) }, /* Quectel BG96 */
+	{ USB_DEVICE(0x2C7C, 0x0435) }, /* Quectel AG35 */
+#endif
 	{ USB_DEVICE(OPTION_VENDOR_ID, OPTION_PRODUCT_COLT) },
 	{ USB_DEVICE(OPTION_VENDOR_ID, OPTION_PRODUCT_RICOLA) },
 	{ USB_DEVICE(OPTION_VENDOR_ID, OPTION_PRODUCT_RICOLA_LIGHT) },
@@ -2138,6 +2150,10 @@ static struct usb_serial_driver option_1port_device = {
 	.suspend           = usb_wwan_suspend,
 	.resume            = usb_wwan_resume,
 #endif
+
+#if 0 //Added by Quectel
+	.reset_resume = usb_wwan_resume,
+#endif
 };
 
 static struct usb_serial_driver * const serial_drivers[] = {
@@ -2225,6 +2241,23 @@ static int option_probe(struct usb_serial *serial,
 		data->send_setup = option_send_setup;
 	}
 	spin_lock_init(&data->susp_lock);
+
+#if 1 //Added by Quectel
+	//Quectel UC20's interface 4 can be used as USB network device
+	if (serial->dev->descriptor.idVendor == cpu_to_le16(0x05C6) &&
+	serial->dev->descriptor.idProduct == cpu_to_le16(0x9003)
+	&& serial->interface->cur_altsetting->desc.bInterfaceNumber >= 4)
+	return -ENODEV;
+	//Quectel EC20's interface 4 can be used as USB network device
+	if (serial->dev->descriptor.idVendor == cpu_to_le16(0x05C6) &&
+	serial->dev->descriptor.idProduct == cpu_to_le16(0x9215)
+	&& serial->interface->cur_altsetting->desc.bInterfaceNumber >= 4)
+	return -ENODEV;
+	//Quectel EC25&EC21&EG91&EG95&EG06&EP06&EM06&BG96/AG35's interface 4 can be used as USB network device
+	if (serial->dev->descriptor.idVendor == cpu_to_le16(0x2C7C)
+	&& serial->interface->cur_altsetting->desc.bInterfaceNumber >= 4)
+	return -ENODEV;
+#endif
 
 	usb_set_serial_data(serial, data);
 

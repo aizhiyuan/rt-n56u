@@ -402,9 +402,12 @@ menuL2_title = new Array("", "<#menu5_11#>", "<#menu5_12#>", "<#menu5_2#>", "<#m
 menuL2_link  = new Array("", tablink[0][1], tablink[1][1], tablink[2][1], tablink[3][1], tablink[4][1], tablink[5][1], tablink[6][1], tablink[7][1], tablink[8][1], tablink[9][1]);
 
 //Level 1 Menu in Gateway, Router mode
-menuL1_title = new Array("", "<#menu1#>", "<#menu3#>", "<#menu2#>", "<#menu6#>", "<#menu4#>", "<#menu5_8#>", "<#menu5#>");
-menuL1_link = new Array("", "index.asp", "aidisk.asp", "vpnsrv.asp", "vpncli.asp", "Main_TrafficMonitor_realtime.asp", "Advanced_System_Info.asp", "as.asp");
-menuL1_icon = new Array("", "icon-home", "icon-hdd", "icon-retweet", "icon-globe", "icon-tasks", "icon-random", "icon-wrench");
+//menuL1_title = new Array("", "<#menu1#>", "<#menu3#>", "<#menu2#>", "<#menu6#>", "<#menu4#>", "<#menu5_8#>", "<#menu5#>");
+//menuL1_link = new Array("", "index.asp", "aidisk.asp", "vpnsrv.asp", "vpncli.asp", "Main_TrafficMonitor_realtime.asp", "Advanced_System_Info.asp", "as.asp");
+//menuL1_icon = new Array("", "icon-home", "icon-hdd", "icon-retweet", "icon-globe", "icon-tasks", "icon-random", "icon-wrench");
+menuL1_title = new Array("", "<#menu1#>", "<#menu5_2#>", "<#menu7#>", "<#menu5_4_4#>", "<#menu5_6#>");
+menuL1_link  = new Array("", "index.asp", "Advanced_LAN_Content.asp", "Advanced_RemoteCon_Content.asp", "Advanced_Modem_others.asp", "Advanced_System_Content.asp");
+menuL1_icon  = new Array("", "icon-home", "icon-hdd", "icon-retweet", "icon-globe", "icon-wrench");
 
 function show_menu(L1, L2, L3){
 	var i;
@@ -512,7 +515,7 @@ function show_menu(L1, L2, L3){
 	}
 
 	$("mainMenu").innerHTML = menu1_code;
-
+/*
 	for(var i = 1; i <= menuL2_title.length-1; ++i){
 		if(menuL2_title[i] == "")
 			continue;
@@ -540,17 +543,12 @@ function show_menu(L1, L2, L3){
 		$("tabMenu").innerHTML = tab_code;
 	}
 	else
+*/
 		$("tabMenu").innerHTML = "";
 }
 
 function show_footer(){
 	footer_code = '<div align="center" class="bottom-image"></div>\n';
-	footer_code +='<div align="center" class="copyright"><#footer_copyright_desc#></div>\n';
-	footer_code +='<div align="center">\n';
-	footer_code +='  <span>Highcharts by Torstein Hønsi & <a href="http://www.highcharts.com">Highsoft</a></span></br>\n';
-	footer_code +='  <span>Big icons designed by <a href="http://www.freepik.com">Freepik</a></br></span>\n';
-	footer_code +='  <span>Non-Commercial Use Only</span></br>\n';
-	footer_code +='</div>\n';
 
 	$("footer").innerHTML = footer_code;
 

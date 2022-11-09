@@ -8,6 +8,8 @@ romfs:
 	$(ROMFSINST) /sbin/dev_init.sh
 	$(ROMFSINST) /sbin/reset_ss.sh
 	$(ROMFSINST) /sbin/mtd_storage.sh
+	$(ROMFSINST) /sbin/clear_p2p_route.sh
+	$(ROMFSINST) /sbin/update_p2p_route.sh
 ifeq ($(STORAGE_ENABLED),y)
 	$(ROMFSINST) /sbin/automount.sh
 endif

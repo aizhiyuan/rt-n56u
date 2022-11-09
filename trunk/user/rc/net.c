@@ -935,3 +935,24 @@ set_libc_gai(int ipv4_first)
 	}
 }
 
+void 
+clear_p2p_route_rule()
+{
+	openlog("FX-6000", 0, 0);
+	syslog(0, "Clear Remote Connection Channel\n");
+	closelog();
+
+	system("/sbin/clear_p2p_route.sh");
+}
+
+void 
+update_p2p_route_rule()
+{
+	openlog("FX-6000", 0, 0);
+	syslog(0, "Update Remote Connection Channel\n");
+	closelog();
+
+	system("/sbin/update_p2p_route.sh");
+}
+
+

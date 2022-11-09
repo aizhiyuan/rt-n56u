@@ -46,6 +46,14 @@
 			{0,0,0,0}
 		};
 
+	struct variable variables_P2PConnection_RuleList[] = {
+			{"p2p_route_rule_name", "20", NULL, FALSE},
+			{"p2p_gw_ip_x", "16", NULL, FALSE},
+			{"p2p_local_ip_x", "16", NULL, FALSE},
+			{"p2p_local_mask_x", "16", NULL, FALSE},
+			{0,0,0,0}
+		};
+
 	struct variable variables_FirewallConfig_LWFilterList[] = {
 			{"filter_lw_srcip_x", "16", NULL, FALSE},
 			{"filter_lw_srcport_x", "12", NULL, FALSE},
@@ -128,17 +136,17 @@
 #endif
 			{"http_username", "", NULL, EVM_RESTART_CROND|EVM_BLOCK_UNSAFE},
 			{"http_passwd", "", NULL, EVM_BLOCK_UNSAFE},
-			{"modem_rule", "", NULL, EVM_RESTART_MODEM},
-			{"modem_type", "", NULL, EVM_RESTART_MODEM},
-			{"modem_country", "", NULL, EVM_RESTART_MODEM},
-			{"modem_isp", "", NULL, EVM_RESTART_MODEM},
-			{"modem_apn", "", NULL, EVM_RESTART_MODEM},
-			{"modem_dialnum", "", NULL, EVM_RESTART_MODEM},
+			{"modem_rule", "1", NULL, EVM_RESTART_MODEM},
+			{"modem_type", "0", NULL, EVM_RESTART_MODEM},
+			{"modem_country", "CN", NULL, EVM_RESTART_MODEM},
+			{"modem_isp", "China Unicom", NULL, EVM_RESTART_MODEM},
+			{"modem_apn", "3gnet", NULL, EVM_RESTART_MODEM},
+			{"modem_dialnum", "*99#", NULL, EVM_RESTART_MODEM},
 			{"modem_user", "", NULL, EVM_RESTART_MODEM},
 			{"modem_pass", "", NULL, EVM_RESTART_MODEM},
 			{"modem_pin", "", NULL, EVM_RESTART_MODEM},
 			{"modem_dnsa", "", NULL, EVM_RESTART_MODEM},
-			{"modem_node", "", NULL, EVM_RESTART_MODEM},
+			{"modem_node", "3", NULL, EVM_RESTART_MODEM},
 			{"modem_nets", "", NULL, EVM_RESTART_MODEM},
 			{"modem_cmd", "", NULL, EVM_RESTART_MODEM},
 			{"modem_mtu", "", NULL, EVM_RESTART_MODEM},
@@ -292,6 +300,13 @@
 	struct variable variables_WANCommonInterface[] = {
 			{0,0,0,0}
 		};
+
+	struct variable variables_P2PConnection[] = {
+		{"p2p_enable_x", "", NULL, EVM_ADD_ROUTE_RULE},
+		{"p2p_num_x", "", NULL, EVM_ADD_ROUTE_RULE},
+		{"RuleList", "Group", ARGV((char*)variables_P2PConnection_RuleList, "24", "75", "p2p_num_x"), EVM_ADD_ROUTE_RULE},
+		{0,0,0,0}
+	};
 
 	struct variable variables_IPConnection[] = {
 			{"sw_mode", "", NULL, EVM_RESTART_REBOOT},
@@ -862,6 +877,7 @@
 		{"WLANAuthentication11a",	variables_WLANAuthentication11a},
 		{"WLANAuthentication11b",	variables_WLANAuthentication11b},
 		{"LANGUAGE",			variables_Language},
+		{"P2PConnection",		variables_P2PConnection},
 		{0,0}
 	};
 
@@ -928,6 +944,7 @@
 		{EVM_RESTART_NMBD,		EVT_RESTART_NMBD,		RCN_RESTART_NMBD,	0},
 #endif
 		{EVM_RESTART_FIREWALL,		EVT_RESTART_FIREWALL,		RCN_RESTART_FIREWALL,	0},
+		{EVM_ADD_ROUTE_RULE,		EVT_ADD_ROUTE_RULE,		RCN_ADD_ROUTE_RULE,		0},
 		{0,0,0,0}
 	};
 

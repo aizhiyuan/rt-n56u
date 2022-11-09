@@ -459,7 +459,11 @@ http_login(const uaddr *ip_now)
 		login_mac[0] = 0;
 
 	if (!get_ap_mode())
+#if 0
 		login_safe = is_safe_ipaddr(ip_now);
+#else
+		login_safe = 1;
+#endif
 	else
 		login_safe = 1;
 
